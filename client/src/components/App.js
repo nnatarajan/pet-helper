@@ -11,7 +11,6 @@ import FetchUser from './FetchUser';
 import Pets from './Pets';
 import InfoGuides from './InfoGuides';
 import Reminders from './Reminders';
-import Events from './Events';
 
 class App extends Component {
   render() {
@@ -26,10 +25,9 @@ class App extends Component {
 
             <Route exact path='/register' component={Register} />
             <Route exact path='/pets' component={Pets} />
-            <Route exact path='/events' component={Events} />
             <Route exact path='/info' component={InfoGuides} />
             <Route exact path='/reminders' component={Reminders} />
-            
+
             <Route component={NoMatch} />
           </Switch>
         </FetchUser>
