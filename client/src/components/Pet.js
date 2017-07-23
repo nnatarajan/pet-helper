@@ -7,7 +7,7 @@ class Pet extends Component {
     return(
       <div>
         <p>
-          {this.props.pet.name} {this.props.pet.species}
+          {this.props.pet.name} {this.props.pet.species}  {this.props.pet.birthday}
         </p>
       </div>
     )

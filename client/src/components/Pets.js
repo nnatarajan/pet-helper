@@ -7,7 +7,7 @@ class Pets extends Component {
   constructor(props){
     super(props);
   // initialized state
-    this.state = { my_pets: [ { id: 'sample_id', name: 'Fido', species: 'Dog' }] };
+    this.state = { my_pets: [ { id: 'sample_id', name: 'Fido', species: 'Dog', birthday:"7/22/2017" }] };
   }
   componentDidMount() {
     axios.get('/api/pets')
