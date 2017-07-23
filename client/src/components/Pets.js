@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Header } from 'semantic-ui-react';
+import { Header, Grid, Segment, Menu, Image} from 'semantic-ui-react';
 import Pet from './Pet';
 
 class Pets extends Component {
@@ -19,16 +19,30 @@ class Pets extends Component {
   render() {
     return(
       <div>
-        <Header as='h1' textAlign='center'>Pets Component</Header>
-      {
-        <ol>
-          {
-            this.state.my_pets.map(
-              (pet) => <li><Pet key={pet.id} pet={pet} /></li>
-            )
-          }
-        </ol>
-      }
+        <br />
+        <Header as='h1' textAlign='center'>My Pets</Header>
+
+        <br />
+        <Grid columns='equal' textAlign='center'>
+          <Grid.Row>
+            <Grid.Column>
+              <Segment>Pet Name</Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment>Species</Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment>Birthday</Segment>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+
+        {
+          this.state.my_pets.map(
+            (pet) => <Pet key={pet.id} pet={pet} />
+          )
+        }
+
       </div>
     );
   }

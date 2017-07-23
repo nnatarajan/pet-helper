@@ -11,6 +11,7 @@ import FetchUser from './FetchUser';
 import Pets from './Pets';
 import InfoGuides from './InfoGuides';
 import Reminders from './Reminders';
+import '../styles/styles.css';
 
 class App extends Component {
   render() {
