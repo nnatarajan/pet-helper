@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Header, Grid, Segment, Menu, Image} from 'semantic-ui-react';
 import Pet from './Pet';
+import tiger from '../images/tiger.jpeg';
 
 class Pets extends Component {
   constructor(props){
@@ -24,9 +25,10 @@ class Pets extends Component {
   render() {
     return(
       <div>
-        <br />
-        <Header as='h1' textAlign='center'>My Pets</Header>
-
+        <Segment basic textAlign='center'>
+          <Header as='h1' textAlign='center'>My Pets</Header>
+          <Image src={tiger} alt='tiger' size='medium' centered />
+        </Segment>
         <br />
         <Grid columns='equal' textAlign='center'>
           <Grid.Row>
