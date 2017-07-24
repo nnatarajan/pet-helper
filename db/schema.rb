@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(version: 20170713220846) do
     t.string "name", null: false
     t.string "species", null: false
     t.date "birthday", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_pets_on_user_id"
   end
 
   create_table "reminders", force: :cascade do |t|
@@ -61,4 +63,5 @@ ActiveRecord::Schema.define(version: 20170713220846) do
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
 
+  add_foreign_key "pets", "users"
 end

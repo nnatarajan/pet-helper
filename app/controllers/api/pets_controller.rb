@@ -1,8 +1,9 @@
-class Api::PetsController < petlicationController
+class Api::PetsController < ApplicationController
   before_action :set_pet, only: [:show, :update, :destroy]
 
   def index
-    render json: Pet.all.order(created_at: :desc)
+    # Pets that belong to the current logged in user
+    render json: current_user.pets
   end
 
   def show
@@ -39,4 +40,3 @@ class Api::PetsController < petlicationController
       params.require(:pet).permit(:name, :species, :birthday)
     end
 end
-

@@ -12,7 +12,12 @@ class Pets extends Component {
   componentDidMount() {
     axios.get('/api/pets')
         .then( (response) => {
+          console.log("REQUEST SUCCEEDED");
+          console.log(response);
           this.setState( {my_pets: (response.data)  });
+        }).catch ((response) => {
+          console.log("REQUEST FAILED");
+          console.log(response);
         })
   }
 
