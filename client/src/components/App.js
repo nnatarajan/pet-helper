@@ -6,7 +6,7 @@ import Register from './Register';
 import Flash from './Flash';
 import Home from './Home';
 import ProtectedRoute from './ProtectedRoute';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route} from 'react-router-dom';
 import FetchUser from './FetchUser';
 import Pets from './Pets';
 import InfoGuides from './InfoGuides';
@@ -29,7 +29,7 @@ class App extends Component {
             <Route exact path='/register' component={Register} />
             <Route exact path='/pets' component={Pets} />
             <Route exact path='/addpet' component={AddPet} />
-            <Route exact path='/managepet' component={ManagePet} />
+            <Route path='/managepet/:petid' component={ManagePet} />
             <Route exact path='/info' component={InfoGuides} />
             <Route exact path='/reminders' component={Reminders} />
 

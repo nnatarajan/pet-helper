@@ -11,8 +11,12 @@ class ManagePet extends Component {
   // initialized state
     this.state = { my_pet: { id: 'sample_id', name: 'Fido', species: 'Dog', birthday:"7/22/2017" } };
   }
+
   componentDidMount() {
-    axios.get('/api/pets/1')
+    console.log("the props are");
+    console.log(this.props);
+    const petid = this.props.match.params.petid;
+    axios.get('/api/pets/{petid}')
         .then( (response) => {
           console.log("REQUEST SUCCEEDED");
           console.log(response);
