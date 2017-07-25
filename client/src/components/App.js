@@ -11,6 +11,7 @@ import FetchUser from './FetchUser';
 import Pets from './Pets';
 import InfoGuides from './InfoGuides';
 import Reminders from './Reminders';
+import AddPet from './AddPet';
 import './App.css';
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
 
             <Route exact path='/register' component={Register} />
             <Route exact path='/pets' component={Pets} />
+            <Route exact path='/addpet' component={AddPet} />
             <Route exact path='/info' component={InfoGuides} />
             <Route exact path='/reminders' component={Reminders} />
 

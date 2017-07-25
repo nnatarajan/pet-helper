@@ -12,7 +12,8 @@ class Api::PetsController < ApplicationController
 
   def create
     pet = Pet.create(pet_params)
-    if pet.save
+    pet.user = current_user
+    if pet.save!
       render json: pet
     else
       render json: { errors: pet.errors.full_messages.join(',') }, status: 422
