@@ -2,20 +2,21 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Header, Grid, Segment, Menu, Image} from 'semantic-ui-react';
 import Pet from './Pet';
-import Dog from '../images/dog2.jpeg';
+import Pets from './Pets';
+import Tiger from '../images/tiger.jpeg';
 
-class Pets extends Component {
+class ManagePet extends Component {
   constructor(props){
     super(props);
   // initialized state
-    this.state = { my_pets: [ { id: 'sample_id', name: 'Fido', species: 'Dog', birthday:"7/22/2017" }] };
+    this.state = { my_pet: { id: 'sample_id', name: 'Fido', species: 'Dog', birthday:"7/22/2017" } };
   }
   componentDidMount() {
-    axios.get('/api/pets')
+    axios.get('/api/pets/1')
         .then( (response) => {
           console.log("REQUEST SUCCEEDED");
           console.log(response);
-          this.setState( {my_pets: (response.data)  });
+          this.setState( {my_pet: (response.data)  });
         }).catch ((response) => {
           console.log("REQUEST FAILED");
           console.log(response);
@@ -26,8 +27,8 @@ class Pets extends Component {
     return(
       <div>
         <Segment basic textAlign='center'>
-          <Header as='h1' textAlign='center'>My Pets</Header>
-          <Image src={Dog} alt='Dog' centered />
+          <Header as='h1' textAlign='center'>Manage My Pet</Header>
+          <Image src={Tiger} alt='Tiger' centered />
         </Segment>
         <br />
         <Grid columns='equal' textAlign='center'>
@@ -45,9 +46,7 @@ class Pets extends Component {
         </Grid>
 
         {
-          this.state.my_pets.map(
-            (pet) => <Pet key={pet.id} pet={pet} />
-          )
+          <Pet pet={this.state.my_pet} key={this.state.my_pet.id}/>
         }
 
       </div>
@@ -55,4 +54,4 @@ class Pets extends Component {
   }
 }
 
-export default Pets;
+export default ManagePet;
