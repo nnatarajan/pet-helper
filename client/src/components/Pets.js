@@ -41,8 +41,12 @@ class Pets extends Component {
             <Grid.Column>
               <Segment>Birthday</Segment>
             </Grid.Column>
+            <Grid.Column>
+              <Segment>Pet Care</Segment>
+            </Grid.Column>
           </Grid.Row>
         </Grid>
+        <hr />
 
         {
           this.state.my_pets.map(

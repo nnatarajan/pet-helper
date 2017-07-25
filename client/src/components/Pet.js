@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Grid, Segment } from 'semantic-ui-react';
+import { Grid, Segment, Button } from 'semantic-ui-react';
 
 class Pet extends Component {
 
@@ -22,6 +22,13 @@ class Pet extends Component {
               </Grid.Column>
               <Grid.Column>
                 <Segment>{this.props.pet.birthday}</Segment>
+              </Grid.Column>
+              <Grid.Column>
+                <Segment>
+                  <Button onClick fluid color='blue'
+                  size='small'content = 'Manage my pet'
+                  />
+                </Segment>
               </Grid.Column>
             </Grid.Row>
           </Grid>
