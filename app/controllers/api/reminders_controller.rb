@@ -1,7 +1,8 @@
 class Api::RemindersController < ApplicationController
+  before_action :set_pet, only: [:index, :create]
 
   def index
-    render json: Reminder.all.order(created_at: :desc)
+    render json: @pet.reminders.all.order(created_at: :desc)
   end
 
   def show
@@ -9,7 +10,7 @@ class Api::RemindersController < ApplicationController
   end
 
   def create
-    reminder = Reminder.create(reminder_params)
+    reminder = @pet.reminders.create(reminder_params)
     if reminder.save
       render json: reminder
     else
@@ -30,6 +31,11 @@ class Api::RemindersController < ApplicationController
   end
 
   private
+
+    def set_pet
+      @pet = Pet.find(params[:pet_id])
+    end
+
     def set_reminder
       @reminder = Reminder.find(params[:id])
     end

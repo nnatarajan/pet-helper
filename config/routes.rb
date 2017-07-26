@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'api/auth'
   namespace :api do
-    resources :pets
-    resources :reminders
+    resources :pets do
+      resources :reminders
+    end
     #API ROUTES SHOULD GO HERE
   end
 
