@@ -9,6 +9,7 @@ import ProtectedRoute from './ProtectedRoute';
 import { Switch, Route} from 'react-router-dom';
 import FetchUser from './FetchUser';
 import Pets from './Pets';
+import Adoptions from './Adoptions'
 import InfoGuides from './InfoGuides';
 import Reminders from './Reminders';
 import AddPet from './AddPet';
@@ -32,6 +33,7 @@ class App extends Component {
             <Route path='/managepet/:petid' component={ManagePet} />
             <Route exact path='/info' component={InfoGuides} />
             <Route exact path='/reminders' component={Reminders} />
+            <Route exact path='/adoptions' component={Adoptions} />
 
             <Route component={NoMatch} />
           </Switch>
