@@ -5,14 +5,13 @@ export const addPet = (pet) => {
     const { name, species, birthday, notes} = pet;
     // TODO: Add user id?
     axios.post(`/api/pets`, { pet: { name, species, birthday, notes } })
-    .then( res => {
+    .then( (res) => {
       dispatch({ type: 'ADD_PET', pet: res.data });
-      console.log(res)
-      console.log("Request to AddPet Succeeded :)")
-    })
-    .catch( res => {
-      console.log(res)
-      console.log("Request to AddPet Failed :(")
+      console.log(res);
+      console.log("Request to AddPet Succeeded :)");
+    }).catch( (res) => {
+      console.log(res);
+      console.log("Request to AddPet Failed :(");
     });
   }
 }
@@ -24,7 +23,7 @@ export const fetchPets = () => {
       dispatch( { type: 'GET_PETS', pets: res.data});
       console.log("REQUEST SUCCEEDED");
       console.log(res);
-    }).catch (res) => {
+    }).catch((res) => {
       console.log("REQUEST FAILED");
       console.log(res);
     });

@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { Header, Form, Button, Segment } from 'semantic-ui-react';
-import axios from 'axios';
-import { setFlash } from '../actions/flash';
+import { connect } from 'react-redux';
+import { addPet } from '../actions/pets';
 
 class AddPet extends Component {
-  constructor(props) {
-  super(props);
-  this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  state = { name: '', species: '', birthday: '' };
+  // constructor(props) {
+  // super(props);
+  // this.handleSubmit = this.handleSubmit.bind(this);
+  // }
+  //
+  state = { name: '', species: '', birthday: '', notes: '' };
 
   handleSubmit = (e) => {
     e.preventDefault();
-
+    this.props.dispatch(addPet(this.state))
   }
 
   handleChange = (e) => {
@@ -25,7 +25,7 @@ class AddPet extends Component {
   }
 
   render() {
-    const { name, species, birthday} = this.state;
+    const { name, species, birthday, notes } = this.state;
 
     return(
       <Segment basic>
