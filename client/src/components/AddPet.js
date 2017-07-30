@@ -62,6 +62,17 @@ class AddPet extends Component {
               value={birthday}
               onChange={this.handleChange}
             />
+            </Form.Field>
+            <Form.Field>
+              <label>About</label>
+              <textarea
+                id='notes'
+                placeholder='Write any special notes about your pet here.'
+                type='notes'
+                required
+                value={notes}
+                onChange={this.handleChange}
+              />
           </Form.Field>
           <Segment basic textAlign='center'>
             <Button type='submit'>Submit</Button>
