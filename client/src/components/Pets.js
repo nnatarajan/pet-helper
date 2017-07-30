@@ -11,15 +11,7 @@ class Pets extends Component {
     this.state = { my_pets: [ { id: 'sample_id', name: 'Fido', species: 'Dog', birthday:"7/22/2017" }] };
   }
   componentDidMount() {
-    axios.get('/api/pets')
-        .then( (response) => {
-          console.log("REQUEST SUCCEEDED");
-          console.log(response);
-          this.setState( {my_pets: (response.data)  });
-        }).catch ((response) => {
-          console.log("REQUEST FAILED");
-          console.log(response);
-        })
+
   }
 
   render() {

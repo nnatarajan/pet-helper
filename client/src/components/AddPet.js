@@ -13,16 +13,7 @@ class AddPet extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const { name, species, birthday } = this.state;
-    axios.post('/api/pets', { name, species, birthday })
-      .then( res => {
-        console.log(res)
-        console.log("Request to AddPet Succeeded :)")
-      })
-      .catch( res => {
-        console.log(res)
-        console.log("Request to AddPet Failed :(")
-    });
+
   }
 
   handleChange = (e) => {
