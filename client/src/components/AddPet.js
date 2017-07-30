@@ -72,4 +72,8 @@ class AddPet extends Component {
   }
 }
 
-export default AddPet;
+  const mapStateToProps = (state) => {
+    return { pets: state.pets}
+  }
+
+export default connect(mapStateToProps)(AddPet);
