@@ -46,7 +46,6 @@ class AddPet extends Component {
             <input
               id='species'
               placeholder='Species'
-              type='species'
               required
               value={species}
               onChange={this.handleChange}
@@ -57,7 +56,6 @@ class AddPet extends Component {
             <input
               id='birthday'
               placeholder='Birthday'
-              type='birthday'
               required
               value={birthday}
               onChange={this.handleChange}
@@ -68,7 +66,6 @@ class AddPet extends Component {
               <textarea
                 id='notes'
                 placeholder='Write any special notes about your pet here.'
-                type='notes'
                 required
                 value={notes}
                 onChange={this.handleChange}
