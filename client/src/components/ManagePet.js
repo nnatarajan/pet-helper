@@ -4,7 +4,7 @@ import { Header, Grid, Segment, Menu, Image} from 'semantic-ui-react';
 import Pet from './Pet';
 import Pets from './Pets';
 import { fetchSelectedPet } from '../actions/pets';
-import Tiger from '../images/tiger.jpeg';
+import Kittens from '../images/kittens.jpg';
 
 class ManagePet extends Component {
   // constructor(props){
@@ -56,7 +56,7 @@ class ManagePet extends Component {
       <div>
         <Segment basic textAlign='center'>
           <Header as='h1' textAlign='center'>Manage My Pet</Header>
-          <Image src={Tiger} alt='Tiger' centered />
+          <Image src={ Kittens } alt='Kitten' centered />
         </Segment>
         <br />
         <Grid columns='equal' textAlign='center'>
