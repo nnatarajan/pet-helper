@@ -32,7 +32,7 @@ class App extends Component {
             <Route exact path='/addpet' component={AddPet} />
             <Route path='/managepet/:petid' component={ManagePet} />
             <Route exact path='/info' component={InfoGuides} />
-            <Route exact path='/reminders' component={Reminders} />
+            <Route exact path='/reminders/:petid' component={Reminders} />
             <Route exact path='/adoptions' component={Adoptions} />
 
             <Route component={NoMatch} />

@@ -4,11 +4,6 @@ import { connect } from 'react-redux';
 import { addPet } from '../actions/pets';
 
 class AddPet extends Component {
-  // constructor(props) {
-  // super(props);
-  // this.handleSubmit = this.handleSubmit.bind(this);
-  // }
-  //
   state = { name: '', species: '', birthday: '', notes: '' };
 
   handleSubmit = (e) => {
@@ -55,7 +50,7 @@ class AddPet extends Component {
             <label>Birthday</label>
             <input
               id='birthday'
-              placeholder='Birthday'
+              placeholder='Enter Date Format: YYYY/MM/DD'
               required
               value={birthday}
               onChange={this.handleChange}

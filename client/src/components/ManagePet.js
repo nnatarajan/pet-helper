@@ -11,14 +11,7 @@ class ManagePet extends Component {
   }
 
   display = () => {
-    console.log("IN DISPLAY")
-    console.log(this.props)
     let pet = this.props.pet;
-    if (!pet) {
-      return (
-        <div> WHAT THE HELL IS GOING ON </div>
-      )
-    }
     return (
 
         <Table.Row>
@@ -43,18 +36,16 @@ class ManagePet extends Component {
         <Table.Body>
           { this.display() }
         </Table.Body>
-        <Button href={`reminders`} fluid color='blue'
-        size='small' content = 'Create reminders'
-        />
       </Table>
+      <Button href={`/reminders/{:petid}`} fluid color='blue' content = 'Create reminders'
+      />
+
       </div>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  console.log("IN MAP STATE TO PROPS");
-  console.log(state);
   return { pet: state.pets };
 }
 
