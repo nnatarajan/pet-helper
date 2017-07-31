@@ -28,11 +28,11 @@ class App extends Component {
             <Route exact path='/login' component={Login} />
 
             <Route exact path='/register' component={Register} />
-            <Route exact path='/pets' component={Pets} />
-            <Route exact path='/addpet' component={AddPet} />
-            <Route path='/managepet/:petid' component={ManagePet} />
+            <ProtectedRoute exact path='/pets' component={Pets} />
+            <ProtectedRoute exact path='/addpet' component={AddPet} />
+            <ProtectedRoute path='/managepet/:petid' component={ManagePet} />
             <Route exact path='/info' component={InfoGuides} />
-            <Route exact path='/reminders/:petid' component={Reminders} />
+            <ProtectedRoute exact path='/reminders/:petid' component={Reminders} />
             <Route exact path='/adoptions' component={Adoptions} />
 
             <Route component={NoMatch} />
