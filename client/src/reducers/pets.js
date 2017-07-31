@@ -4,6 +4,8 @@ const pets = (state = [], action) => {
         return action.pets;
       case 'ADD_PET':
         return [ ...state, action.pet ];
+      case 'GET_SELECTED_PET':
+        return action.pet;
       default:
         return state;
     }

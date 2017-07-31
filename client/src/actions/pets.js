@@ -8,10 +8,25 @@ export const addPet = (pet) => {
     .then( res => {
       dispatch({ type: 'ADD_PET', pet: res.data });
       console.log(res);
-      alert("Pet successfully added");
-    }).catch( res => {
+      alert("Pet add successfully!");
+    })
+    .catch( res => {
       console.log(res);
-      console.log("Request to AddPet Failed :(");
+    });
+  }
+}
+
+export const fetchSelectedPet = (petid) => {
+  return(dispatch) => {
+    // const petid = this.props.match.params.petid;
+    axios.get(`/api/pets/${petid}`)
+    .then( (res) => {
+      console.log(res);
+      dispatch({ type: 'GET_SELECTED_PET', pet: res.data });
+    })
+    .catch ((res) => {
+      console.log("could not fetch pet");
+      console.log(res);
     });
   }
 }
@@ -20,12 +35,8 @@ export const fetchPets = () => {
   return(dispatch) => {
     axios.get(`/api/pets`)
     .then( res => {
-      console.log("Request to fetchPets succeeded :)")
-      console.log(res);
-      console.log("DISPATCHING");
       dispatch( { type: 'GET_PETS', pets: res.data});
     }).catch( res => {
-      alert("Request to fetchPets failed :(");
       console.log(res);
     });
   }

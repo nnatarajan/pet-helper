@@ -21,7 +21,7 @@ class Pets extends Component {
           </Grid.Column>
           <Grid.Column>
             <Segment>
-              <Button onClick fluid color='blue'
+              <Button href={`managepet/${pet.id}`} fluid color='blue'
               size='small' content = 'Manage my pet'
               />
             </Segment>
