@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Grid, Segment, Menu, Image} from 'semantic-ui-react';
+import { Header, Segment, Menu, Image, Table, Button} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
 import Kittens from '../images/kittens.jpg';
 
@@ -20,20 +20,13 @@ class ManagePet extends Component {
       )
     }
     return (
-      <Grid.Row>
-        <Grid.Column>
-          <Segment>{pet.name}</Segment>
-        </Grid.Column>
-        <Grid.Column>
-          <Segment>{pet.species}</Segment>
-        </Grid.Column>
-        <Grid.Column>
-          <Segment>{pet.birthday}</Segment>
-        </Grid.Column>
-        <Grid.Column>
-          <Segment>{pet.notes}</Segment>
-        </Grid.Column>
-      </Grid.Row>
+
+        <Table.Row>
+          <Table.Cell>Pet Name: {pet.name}</Table.Cell>
+          <Table.Cell>Species: {pet.species}</Table.Cell>
+          <Table.Cell>Birthday: {pet.birthday}</Table.Cell>
+          <Table.Cell>Notes: {pet.notes}</Table.Cell>
+        </Table.Row>
     )
   }
 
@@ -45,24 +38,15 @@ class ManagePet extends Component {
           <Header as='h1' textAlign='center'>Manage My Pet</Header>
           <Image src={ Kittens } alt='Kitten' centered />
         </Segment>
-        <br />
-        <Grid columns='equal' textAlign='center'>
-          <Grid.Row>
-            <Grid.Column>
-              <Segment>Pet Name</Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment>Species</Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment>Birthday</Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment>Notes</Segment>
-            </Grid.Column>
-          </Grid.Row>
-        { this.display() }
-        </Grid>
+
+        <Table padded='very'>
+        <Table.Body>
+          { this.display() }
+        </Table.Body>
+        <Button href={`reminders`} fluid color='blue'
+        size='small' content = 'Create reminders'
+        />
+      </Table>
       </div>
     );
   }
