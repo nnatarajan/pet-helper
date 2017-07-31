@@ -17,9 +17,6 @@ class Pets extends Component {
             <Segment>{pet.name}</Segment>
           </Grid.Column>
           <Grid.Column>
-            <Segment>{pet.species}</Segment>
-          </Grid.Column>
-          <Grid.Column>
             <Segment>{pet.birthday}</Segment>
           </Grid.Column>
           <Grid.Column>
@@ -36,14 +33,25 @@ class Pets extends Component {
 
   render() {
     return(
-        <Segment basic textAlign='center'>
-          <Header as='h1' textAlign='center'>My Pets</Header>
-          <Image src={Dog} alt='Dog' centered />
-          <br />
-          <Grid columns='equal' textAlign='center'>
-            { this.display() }
-          </Grid>
-        </Segment>
+      <Segment basic textAlign='center'>
+        <Header as='h1' textAlign='center'>My Pets</Header>
+        <Image src={Dog} alt='Dog' centered />
+        <br />
+        <Grid columns='equal' textAlign='center'>
+          <Grid.Row>
+            <Grid.Column>
+              <Segment>Name</Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment>Birthday</Segment>
+            </Grid.Column>
+            <Grid.Column>
+              <Segment>Pet Care</Segment>
+            </Grid.Column>
+          </Grid.Row>
+        { this.display() }
+        </Grid>
+      </Segment>
     );
   }
 }
