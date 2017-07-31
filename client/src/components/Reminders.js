@@ -1,13 +1,31 @@
 import React, { Component } from 'react';
-import { Header } from 'semantic-ui-react';
+import { connect } from 'react-redux';
+import { addReminder } from '../actions/reminders';
+import DatePicker from 'react-datepicker';
+import moment from 'moment';
+import { Header, Grid, Segment, Menu, Image, Button} from 'semantic-ui-react';
 
 class Reminders extends Component {
-    
+
   render() {
     return(
-      <Header as='h1' textAlign='center'>Reminders Component</Header>
+      <div>
+        <Header as='h1' textAlign='center'>Set Reminders</Header>
+
+        {/* <DatePicker
+          dateFormat="YYYY/MM/DD"
+          selected={this.state.startDate}
+          onChange={this.handleChange}
+        /> */}
+      </div>
     );
   }
 }
 
-export default Reminders;
+
+
+const mapStateToProps = (state) => {
+  return { reminders: state.reminders };
+}
+
+export default connect(mapStateToProps)(Reminders);
