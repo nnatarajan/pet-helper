@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const addPet = (pet) => {
   return(dispatch) => {
-    const { name, species, birthday, notes} = pet;
+    const { name, species, birthday, notes } = pet;
     // TODO: Add user id?
     axios.post(`/api/pets`, { pet: { name, species, birthday, notes } })
     .then( res => {

@@ -11,7 +11,14 @@ class ManagePet extends Component {
   }
 
   display = () => {
+    console.log("IN DISPLAY")
+    console.log(this.props)
     let pet = this.props.pet;
+    if (!pet) {
+      return (
+        <div> WHAT THE HELL IS GOING ON </div>
+      )
+    }
     return (
       <Grid.Row>
         <Grid.Column>
@@ -50,6 +57,9 @@ class ManagePet extends Component {
             <Grid.Column>
               <Segment>Birthday</Segment>
             </Grid.Column>
+            <Grid.Column>
+              <Segment>Notes</Segment>
+            </Grid.Column>
           </Grid.Row>
         { this.display() }
         </Grid>
@@ -59,6 +69,8 @@ class ManagePet extends Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log("IN MAP STATE TO PROPS");
+  console.log(state);
   return { pet: state.pets };
 }
 

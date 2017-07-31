@@ -38,6 +38,6 @@ class Api::PetsController < ApplicationController
     end
 
     def pet_params
-      params.require(:pet).permit(:name, :species, :birthday)
+      params.require(:pet).permit(:name, :species, :birthday, :notes)
     end
 end
