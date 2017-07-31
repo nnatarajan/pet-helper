@@ -17,10 +17,12 @@ export const addPet = (pet) => {
 }
 
 export const fetchSelectedPet = (petid) => {
+  console.log("CALLING FETCH SELECTED PET");
   return(dispatch) => {
     // const petid = this.props.match.params.petid;
     axios.get(`/api/pets/${petid}`)
     .then( (res) => {
+      console.log("GOT PET SUCCESSFULLY")
       console.log(res);
       dispatch({ type: 'GET_SELECTED_PET', pet: res.data });
     })
