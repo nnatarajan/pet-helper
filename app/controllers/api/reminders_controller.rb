@@ -12,7 +12,6 @@ class Api::RemindersController < ApplicationController
   def create
     reminder = @pet.reminders.create(reminder_params)
     reminder.pet = @pet
-    puts reminder.inspect
     if reminder.save!
       render json: reminder
     else

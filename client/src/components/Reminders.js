@@ -29,7 +29,7 @@ import { addReminder } from '../actions/reminders';
 // ]
 
 class Reminders extends Component {
-  state = { reminder_type: '', date_time: '', repeat: 'false', repeat_pattern: 'yearly'};
+  state = { reminder_type: '', date_time: '', repeat: true, repeat_pattern: 'yearly'};
 
   handleSubmit = (e) => {
     e.preventDefault();

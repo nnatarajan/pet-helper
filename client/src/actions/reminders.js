@@ -6,7 +6,7 @@ export const addReminder = (reminder, petid) => {
     const pet_id = petid;
     axios.post(`/api/pets/${petid}/reminders/`, {reminder: { reminder_type, date_time, repeat, repeat_pattern } })
     .then( res => {
-      dispatch({ reminder_type: 'ADD_REMINDER', reminder: res.data });
+      dispatch({ type: 'ADD_REMINDER', reminder: res.data });
       console.log(res);
       alert("Reminder added successfully!");
     })
