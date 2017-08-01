@@ -11,7 +11,9 @@ class Api::RemindersController < ApplicationController
 
   def create
     reminder = @pet.reminders.create(reminder_params)
-    if reminder.save
+    reminder.pet = @pet
+    puts reminder.inspect
+    if reminder.save!
       render json: reminder
     else
       render json: { errors: reminder.errors.full_messages.join(',') }, status: 422
@@ -41,6 +43,6 @@ class Api::RemindersController < ApplicationController
     end
 
     def reminder_params
-      params.require(:reminder).permit(:type, :date_time, :repeat, :repeat_pattern)
+      params.require(:reminder).permit(:reminder_type, :date_time, :repeat, :repeat_pattern)
     end
 end

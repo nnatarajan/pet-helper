@@ -21,19 +21,22 @@ import { addReminder } from '../actions/reminders';
 // { key: 'misc', text: 'Enter Custom Reminder', value: 'misc' },
 // ]
 
-const pattern = [
-{ key: 'daily', text: 'Daily', value: 'daily' },
-{ key: 'weekly', text: 'Weekly', value: 'weekly' },
-{ key: 'monthly', text: 'Monthly', value: 'monthly' },
-{ key: 'yearly', text: 'Yearly', value: 'yearly'},
-]
+// const pattern = [
+// { key: 'daily', text: 'Daily', value: 'daily' },
+// { key: 'weekly', text: 'Weekly', value: 'weekly' },
+// { key: 'monthly', text: 'Monthly', value: 'monthly' },
+// { key: 'yearly', text: 'Yearly', value: 'yearly'},
+// ]
 
 class Reminders extends Component {
-  state = { type: '', date_time: '', repeat: '', repeat_pattern: ''};
+  state = { reminder_type: '', date_time: '', repeat: 'false', repeat_pattern: 'yearly'};
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.dispatch(addReminder(this.state))
+    let { dispatch, match: { params } } = this.props;
+    console.log("I think the pet id is");
+    console.log(params.petid);
+    this.props.dispatch(addReminder(this.state, params.petid))
   }
 
   handleChange = (e) => {
@@ -45,19 +48,19 @@ class Reminders extends Component {
   }
 
   render() {
-    const { type, date_time, repeat, repeat_pattern } = this.state;
+    const { reminder_type, date_time, repeat, repeat_pattern } = this.state;
 
     return(
       <Segment basic>
         <Header as='h1' textAlign='center'>Set Reminders</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
-            <label>Type</label>
+            <label>Reminder Type</label>
             <input
-              id='type'
+              id='reminder_type'
               placeholder='Enter reminder type. For example, Vet Appointment'
               required
-              value={type}
+              value={reminder_type}
               onChange={this.handleChange}
             />
           </Form.Field>
@@ -89,7 +92,6 @@ class Reminders extends Component {
     );
   }
 }
-
 
 const mapStateToProps = (state) => {
   return { reminders: state.reminders };
