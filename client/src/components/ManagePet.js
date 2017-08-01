@@ -37,7 +37,7 @@ class ManagePet extends Component {
           { this.display() }
         </Table.Body>
       </Table>
-      <Button href={`/reminders/{:petid}`} fluid color='blue' content = 'Create reminders'
+      <Button href={`/reminders/${this.props.match.params.petid}`} fluid color='blue' content = 'Create reminders'
       />
 
       </div>
