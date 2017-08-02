@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Header, Segment, Grid, Image, Card} from 'semantic-ui-react';
+import { Header, Segment, Grid, Image, Item, Divider } from 'semantic-ui-react';
 import Kitty from '../images/adoption.jpg';
 
 class Adoptions extends Component {
@@ -24,18 +24,38 @@ class Adoptions extends Component {
   display = () => {
     return this.state.adoptions.map( adoptions => {
       return (
+        <Segment color='green' inverted>
+               <Grid.Column computer={8} tablet={16} mobile={16}>
+                 <Item>
+                   <Item.Content>
+                     <Item.Header as='h1'>
+                         {adoptions.name.$t}
+                     </Item.Header>
+                     <Item.Meta>
+                         <div>
+                           <span>{adoptions.address1.$t}</span>
+                           <br />
+                         </div>
+                         <div>
+                           <span>{adoptions.city.$t}, {adoptions.state.$t}, {adoptions.zip.$t}</span>
+                           <br />
+                         </div>
+                         <div>
+                           <span>{adoptions.email.$t}</span>
+                           <br />
+                         </div>
+                         <div>
+                           <span>{adoptions.phone.$t}</span>
+                           <br />
+                         </div>
+                     </Item.Meta>
+                     <Divider />
+                   </Item.Content>
+                 </Item>
+               </Grid.Column>
+             </Segment>
 
-                <Card.Group >
-                <Card color='green' fluid>
-                  <Card.Content header={adoptions.name.$t} />
-                  <Card.Content>
-                    <p>{adoptions.address1.$t}</p>
-                    <p>{adoptions.city.$t}, {adoptions.state.$t}, {adoptions.zip.$t}</p>
-                    <p>{adoptions.email.$t}</p>
-                    <p>{adoptions.phone.$t}</p>
-                  </Card.Content>
-                </Card>
-                </Card.Group>
+
 
       )
     });
@@ -43,7 +63,7 @@ class Adoptions extends Component {
 
   render() {
     return (
-      <Segment basic textAlign='center'>
+      <Segment textAlign='center'>
         <Header as='h1' textAlign='center'>Pet Adoption Shelters</Header>
         <Image src={Kitty} alt='kitten' centered />
         <br />
