@@ -12,7 +12,7 @@ class Adoptions extends Component {
   render() {
     return (
       <Segment basic textAlign='center'>
-        <Header as='h1' textAlign='center'>Adoption Shelters</Header>
+        <Header as='h1' textAlign='center'>Pet Adoption</Header>
         <br />
       </Segment>
     )
