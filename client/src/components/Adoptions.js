@@ -5,8 +5,16 @@ import { Header, Grid, Segment, Menu, Image, Button} from 'semantic-ui-react';
 
 class Adoptions extends Component {
   componentDidMount() {
-    axios.get('/adoptions')
-      .then( res => this.setState({ adoptions: res.data.data }) )
+    axios.get('/api/adoptions/index')
+      .then( res => {
+        console.log("RESPONSE IS");
+        console.log(res);
+        this.setState({ adoptions: res.data.data })
+      })
+      .catch( res => {
+        alert('adoptions call failed');
+        console.log(res);
+      })
   }
 
   render() {
