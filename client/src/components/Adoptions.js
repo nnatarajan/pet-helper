@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
+import { Header, Grid, Segment, Menu, Image, Button} from 'semantic-ui-react';
+
 
 class Adoptions extends Component {
   componentDidMount() {
@@ -9,7 +11,10 @@ class Adoptions extends Component {
 
   render() {
     return (
-      null
+      <Segment basic textAlign='center'>
+        <Header as='h1' textAlign='center'>Adoption Shelters</Header>
+        <br />
+      </Segment>
     )
   }
 }

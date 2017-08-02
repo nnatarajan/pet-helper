@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :pets do
       resources :reminders
     end
+    resources :adoptions
     #API ROUTES SHOULD GO HERE
   end
 
