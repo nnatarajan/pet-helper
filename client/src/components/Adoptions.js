@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Header, Grid, Segment, Menu, Image, Button} from 'semantic-ui-react';
+import { Header, Segment, Grid, Image, Card} from 'semantic-ui-react';
+import Kitty from '../images/adoption.jpg';
 
 class Adoptions extends Component {
   constructor(props) {
@@ -23,17 +24,19 @@ class Adoptions extends Component {
   display = () => {
     return this.state.adoptions.map( adoptions => {
       return (
-        <Grid.Row>
-          <Grid.Column>
-            <Segment>
-              <p>{adoptions.name.$t}</p>
-              <p>{adoptions.address1.$t}</p>
-              <p>{adoptions.city.$t}, {adoptions.state.$t}, {adoptions.zip.$t}</p>
-              <p>{adoptions.email.$t}</p>
-              <p>{adoptions.phone.$t}</p>
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
+
+                <Card.Group >
+                <Card color='green' fluid>
+                  <Card.Content header={adoptions.name.$t} />
+                  <Card.Content>
+                    <p>{adoptions.address1.$t}</p>
+                    <p>{adoptions.city.$t}, {adoptions.state.$t}, {adoptions.zip.$t}</p>
+                    <p>{adoptions.email.$t}</p>
+                    <p>{adoptions.phone.$t}</p>
+                  </Card.Content>
+                </Card>
+                </Card.Group>
+
       )
     });
   }
@@ -41,7 +44,8 @@ class Adoptions extends Component {
   render() {
     return (
       <Segment basic textAlign='center'>
-        <Header as='h1' textAlign='center'>Pet Adoption</Header>
+        <Header as='h1' textAlign='center'>Pet Adoption Shelters</Header>
+        <Image src={Kitty} alt='kitten' centered />
         <br />
         { this.display() }
       </Segment>
