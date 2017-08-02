@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Header, Segment, Grid, Image, Item, Divider } from 'semantic-ui-react';
+import { Header, Segment, Grid, Image, Card } from 'semantic-ui-react';
 import Kitty from '../images/adoption.jpg';
 
 class Adoptions extends Component {
@@ -24,36 +24,33 @@ class Adoptions extends Component {
   display = () => {
     return this.state.adoptions.map( adoptions => {
       return (
-        <Segment color='green' inverted>
-               <Grid.Column computer={8} tablet={16} mobile={16}>
-                 <Item>
-                   <Item.Content>
-                     <Item.Header as='h2' style={styles.black}>
-                         <strong>{adoptions.name.$t}</strong>
-                     </Item.Header>
-                     <Item.Meta as='h3' style={styles.black}>
-                         <div>
-                           <span>{adoptions.address1.$t}</span>
-                           <br />
-                         </div>
-                         <div>
-                           <span>{adoptions.city.$t}, {adoptions.state.$t}, {adoptions.zip.$t}</span>
-                           <br />
-                         </div>
-                         <div>
-                           <span>{adoptions.email.$t}</span>
-                           <br />
-                         </div>
-                         <div>
-                           <span>{adoptions.phone.$t}</span>
-                           <br />
-                         </div>
-                     </Item.Meta>
-                     <Divider />
-                   </Item.Content>
-                 </Item>
-               </Grid.Column>
-             </Segment>
+
+        <Grid.Row class='row'>
+        <Grid.Column class='column'>
+            <Card class='ui segment' style={styles.black} color='green' fluid>
+              <Card.Content>
+              <Card.Header content={adoptions.name.$t} />
+
+              <Card.Description>
+
+              <span>{adoptions.address1.$t}</span>
+              <br />
+
+              <span>{adoptions.city.$t}, {adoptions.state.$t}, {adoptions.zip.$t}</span>
+              <br />
+
+              <span>{adoptions.email.$t}</span>
+              <br />
+
+              <span>{adoptions.phone.$t}</span>
+              <br />
+            </Card.Description>
+            </Card.Content>
+          </Card>
+        </Grid.Column>
+        </Grid.Row>
+
+
 
 
 
@@ -69,7 +66,11 @@ class Adoptions extends Component {
         </Header>
         <Image src={Kitty} alt='kitten' centered />
         <br />
-        { this.display() }
+        <Grid class='ui equal width grid' container columns={2} centered>
+
+            { this.display() }
+
+        </Grid>
       </Segment>
     )
   }
