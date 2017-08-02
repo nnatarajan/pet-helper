@@ -11,7 +11,7 @@ class NavBar extends Component {
 
     if(user.id) {
       return(
-        <Menu.Menu position='left'>
+        <Menu.Menu position='left' computer={4} tablet={8} mobile={8}>
           <Link to='/pets'>
             <Menu.Item name='View Pets' />
           </Link>
@@ -26,7 +26,7 @@ class NavBar extends Component {
       );
     } else {
       return(
-        <Menu.Menu position='right'>
+        <Menu.Menu position='right' computer={4} tablet={8} mobile={8}>
           <Link to='/register'>
             <Menu.Item name='Register' />
           </Link>
@@ -41,7 +41,7 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <Menu pointing secondary>
+        <Menu pointing secondary computer={4} tablet={8} mobile={8}>
           <Link to='/'>
             <Menu.Item name='home' />
           </Link>

@@ -15,10 +15,10 @@ class ManagePet extends Component {
     return (
 
         <Table.Row>
-          <Table.Cell>Pet Name: {pet.name}</Table.Cell>
-          <Table.Cell>Species: {pet.species}</Table.Cell>
-          <Table.Cell>Birthday: {pet.birthday}</Table.Cell>
-          <Table.Cell>Notes: {pet.notes}</Table.Cell>
+          <Table.Cell as='h2' >{pet.name}</Table.Cell>
+          <Table.Cell as='h3'>Species: {pet.species}</Table.Cell>
+          <Table.Cell  as='h3'>Birthday: {pet.birthday}</Table.Cell>
+          <Table.Cell  as='h3'>Notes: {pet.notes}</Table.Cell>
         </Table.Row>
     )
   }
@@ -27,22 +27,27 @@ class ManagePet extends Component {
   render() {
     return(
       <div>
-        <Segment basic textAlign='center'>
-          <Header as='h1' textAlign='center'>Manage My Pet</Header>
-          <Image src={ Kittens } alt='Kitten' centered />
-        </Segment>
+      <Segment basic textAlign='center' computer={8} tablet={16} mobile={16}>
+        <Header as='h1' textAlign='center'>Manage My Pet</Header>
+        <Image src={ Kittens } alt='Kitten' centered />
+      </Segment>
 
-        <Table padded='very'>
+        <Table padded='very' computer={8} tablet={16} mobile={16}>
         <Table.Body>
-          { this.display() }
+        { this.display() }
         </Table.Body>
-      </Table>
-      <Button href={`/reminders/${this.props.match.params.petid}`} fluid color='blue' content = 'Create reminders'
-      />
 
+        <br />
+        <Button href={`/reminders/${this.props.match.params.petid}`} fluid color='red' content = 'CREATE REMINDERS' style={styles.black}
+        />
+        </Table>
       </div>
     );
   }
+}
+
+const styles = {
+  black: { color: 'black' },
 }
 
 const mapStateToProps = (state) => {

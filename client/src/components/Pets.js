@@ -27,18 +27,22 @@ class Pets extends Component {
         <Grid.Column computer={8} tablet={16} mobile={16}>
           <Item>
             <Item.Content>
-              <Item.Header as='h2'>
+              <Item.Header as='h2' style={styles.black}>
                   <strong>{ pet.name }</strong>
               </Item.Header>
-              <Item.Meta>
+              <Item.Meta as='h3' style={styles.black}>
                   <div>
                     <span>Birthday: { pet.birthday }</span>
                     <br />
                   </div>
+                  <br />
                   <div>
                     <span>
-                      <Button href={`managepet/${pet.id}`} fluid color='red'
-                      size='small' content = 'Manage my pet'
+                      <Button href={`managepet/${pet.id}`}
+                      color='red'
+                      size='small'
+                      content = 'MANAGE MY PET'
+                      style={styles.black}
                       />
                     </span>
                     <br />
@@ -67,6 +71,11 @@ class Pets extends Component {
     );
   }
 }
+
+const styles = {
+  black: { color: 'black' },
+}
+
 
 const mapStateToProps = (state) => {
   return { pets: state.pets };
