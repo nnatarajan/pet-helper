@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Grid, Segment, Menu, Image, Button} from 'semantic-ui-react';
+import { Header,
+        Grid,
+        Segment,
+        Menu,
+        Image,
+        Button,
+        Label,
+        Item,
+        Divider
+      }
+        from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
 import Dog from '../images/dog2.jpeg';
 
@@ -12,45 +22,47 @@ class Pets extends Component {
   display = () => {
     return this.props.pets.map(pet => {
       return (
-        <Grid.Row>
-          <Grid.Column>
-            <Segment>{pet.name}</Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment>{pet.birthday}</Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment>
-              <Button href={`managepet/${pet.id}`} fluid color='blue'
-              size='small' content = 'Manage my pet'
-              />
-            </Segment>
-          </Grid.Column>
-        </Grid.Row>
+
+        <Segment color='blue' inverted>
+        <Grid.Column computer={8} tablet={16} mobile={16}>
+          <Item>
+            <Item.Content>
+              <Item.Header as='h2'>
+                  <strong>{ pet.name }</strong>
+              </Item.Header>
+              <Item.Meta>
+                  <div>
+                    <span>Birthday: { pet.birthday }</span>
+                    <br />
+                  </div>
+                  <div>
+                    <span>
+                      <Button href={`managepet/${pet.id}`} fluid color='red'
+                      size='small' content = 'Manage my pet'
+                      />
+                    </span>
+                    <br />
+                  </div>
+              </Item.Meta>
+              <Divider />
+            </Item.Content>
+          </Item>
+        </Grid.Column>
+      </Segment>
+
       )
     });
   }
 
   render() {
     return(
-      <Segment basic textAlign='center'>
-        <Header as='h1' textAlign='center'>My Pets</Header>
+      <Segment textAlign='center'>
+        <Header as='h1' textAlign='center'>
+          <strong>My Pets</strong>
+        </Header>
         <Image src={Dog} alt='Dog' centered />
         <br />
-        <Grid columns='equal' textAlign='center'>
-          <Grid.Row>
-            <Grid.Column>
-              <Segment>Name</Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment>Birthday</Segment>
-            </Grid.Column>
-            <Grid.Column>
-              <Segment>Pet Care</Segment>
-            </Grid.Column>
-          </Grid.Row>
         { this.display() }
-        </Grid>
       </Segment>
     );
   }

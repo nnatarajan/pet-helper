@@ -28,10 +28,10 @@ class Adoptions extends Component {
                <Grid.Column computer={8} tablet={16} mobile={16}>
                  <Item>
                    <Item.Content>
-                     <Item.Header as='h1'>
-                         {adoptions.name.$t}
+                     <Item.Header as='h2' style={styles.black}>
+                         <strong>{adoptions.name.$t}</strong>
                      </Item.Header>
-                     <Item.Meta>
+                     <Item.Meta as='h3' style={styles.black}>
                          <div>
                            <span>{adoptions.address1.$t}</span>
                            <br />
@@ -64,13 +64,19 @@ class Adoptions extends Component {
   render() {
     return (
       <Segment textAlign='center'>
-        <Header as='h1' textAlign='center'>Pet Adoption Shelters</Header>
+        <Header as='h1' textAlign='center'>
+          <strong>Pet Adoption Shelters</strong>
+        </Header>
         <Image src={Kitty} alt='kitten' centered />
         <br />
         { this.display() }
       </Segment>
     )
   }
+}
+
+const styles = {
+  black: { color: 'black' },
 }
 
 export default Adoptions;
