@@ -11,14 +11,14 @@ class NavBar extends Component {
 
     if(user.id) {
       return(
-        <Menu.Menu position='left' computer={4} tablet={8} mobile={8}>
+        <Menu.Menu position='left'>
           <Link to='/pets'>
-            <Menu.Item name='View Pets' />
+            <Menu.Item as='h4' name='View Pets' />
           </Link>
           <Link to='/addpet'>
-            <Menu.Item name='AddPet' />
+            <Menu.Item as='h4' name='AddPet' />
           </Link>
-          <Menu.Item
+          <Menu.Item as='h4'
             name='Logout'
             onClick={() => dispatch(handleLogout(history))}
           />
@@ -26,12 +26,12 @@ class NavBar extends Component {
       );
     } else {
       return(
-        <Menu.Menu position='right' computer={4} tablet={8} mobile={8}>
+        <Menu.Menu position='right' >
           <Link to='/register'>
-            <Menu.Item name='Register' />
+            <Menu.Item as='h4' name='Register' />
           </Link>
           <Link to='/login'>
-            <Menu.Item name='Login' />
+            <Menu.Item as='h4' name='Login' />
           </Link>
         </Menu.Menu>
       );
@@ -41,12 +41,12 @@ class NavBar extends Component {
   render() {
     return (
       <div>
-        <Menu pointing secondary computer={4} tablet={8} mobile={8}>
+        <Menu pointing secondary >
           <Link to='/'>
-            <Menu.Item name='home' />
+            <Menu.Item as='h4' name='home' />
           </Link>
           <Link to='/adoptions'>
-            <Menu.Item name='Pet Adoption' />
+            <Menu.Item as='h4' name='Pet Adoption' />
           </Link>
           { this.rightNavs() }
         </Menu>

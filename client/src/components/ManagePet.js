@@ -15,7 +15,7 @@ class ManagePet extends Component {
     return (
 
         <Table.Row>
-          <Table.Cell as='h2' >{pet.name}</Table.Cell>
+          <Table.Cell as='h2'>{pet.name}</Table.Cell>
           <Table.Cell as='h3'>Species: {pet.species}</Table.Cell>
           <Table.Cell  as='h3'>Birthday: {pet.birthday}</Table.Cell>
           <Table.Cell  as='h3'>Notes: {pet.notes}</Table.Cell>
