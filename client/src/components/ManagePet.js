@@ -28,8 +28,8 @@ class ManagePet extends Component {
             </h4>
             </div>
             <div className="card-action">
-              <Button className='grey lighten-2' >
-                <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>CREATE REMINDERS</a>
+              <Button className='grey lighten-2 btn-large' >
+                <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>Create Reminders</a>
               </Button>
             </div>
           </Card>

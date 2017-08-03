@@ -11,6 +11,10 @@ import Dog from '../images/dog2.jpeg';
 import { Card, Button } from 'react-materialize';
 
 class Pets extends Component {
+  constructor(props) {
+    super(props)
+    this.setState({ pets: [] });
+  }
   componentDidMount() {
     this.props.dispatch(fetchPets());
   }
@@ -29,11 +33,11 @@ class Pets extends Component {
             </span>
             <br />
 
-            <span>
+            <div className="card-action">
               <Button className='grey lighten-2 btn-large' >
               <a href={`managepet/${pet.id}`} style={styles.black}>PET INFO</a>
               </Button>
-            </span>
+            </div>
 
             </div>
           </Card>
