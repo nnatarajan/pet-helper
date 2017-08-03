@@ -20,33 +20,33 @@ class Pets extends Component {
     return this.props.pets.map(pet => {
       return (
 
-        <Grid.Row class='row'>
-          <Grid.Column class='column'>
-            <Card class='ui segment' style={styles.black} color='teal' fluid>
-              <Card.Content>
-                <Card.Header content={pet.name} />
-                <Card.Description>
-                <span>Birthday: {pet.birthday}</span>
-                <br />
-                <br />
-                <span>
-                 <Button href={`managepet/${pet.id}`}
-                 color='blue'
-                 size='tiny'
-                 content = 'MANAGE MY PET'
-                 style={styles.black}
-                 />
-                </span>
-                <br />
-                </Card.Description>
-              </Card.Content>
-            </Card>
-          </Grid.Column>
-        </Grid.Row>
+        <div class='row'>
+     <div class="col s12 m6">
+       <br />
+       <Card className='teal accent-2'>
 
-      )
-    });
-  }
+         <span class="card-title">
+           <h2>{pet.name}</h2>
+         </span>
+
+         <div class='card-content'>
+           <br />
+           <span>
+            <Button href={`managepet/${pet.id}`}
+            color='blue'
+            size='tiny'
+            content = 'MANAGE MY PET'
+            />
+           </span>
+           <br />
+         </div>
+
+     </Card>
+   </div>
+   </div>
+ )
+});
+}
 
   render() {
     return(
@@ -64,11 +64,6 @@ class Pets extends Component {
       </Segment>
     )
   }
-}
-
-
-const styles = {
-  black: { color: 'black' },
 }
 
 
