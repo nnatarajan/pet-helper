@@ -3,12 +3,9 @@ import { connect } from 'react-redux';
 import { Header,
         Grid,
         Segment,
-        Menu,
         Image,
         Button,
-        Label,
-        Item,
-        Divider
+        Card
       }
         from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
@@ -23,36 +20,29 @@ class Pets extends Component {
     return this.props.pets.map(pet => {
       return (
 
-        <Segment color='blue' inverted>
-        <Grid.Column computer={8} tablet={16} mobile={16}>
-          <Item>
-            <Item.Content>
-              <Item.Header as='h2' style={styles.black}>
-                  <strong>{ pet.name }</strong>
-              </Item.Header>
-              <Item.Meta as='h3' style={styles.black}>
-                  <div>
-                    <span>Birthday: { pet.birthday }</span>
-                    <br />
-                  </div>
-                  <br />
-                  <div>
-                    <span>
-                      <Button href={`managepet/${pet.id}`}
-                      color='red'
-                      size='small'
-                      content = 'MANAGE MY PET'
-                      style={styles.black}
-                      />
-                    </span>
-                    <br />
-                  </div>
-              </Item.Meta>
-              <Divider />
-            </Item.Content>
-          </Item>
-        </Grid.Column>
-      </Segment>
+        <Grid.Row class='row'>
+          <Grid.Column class='column'>
+            <Card class='ui segment' style={styles.black} color='teal' fluid>
+              <Card.Content>
+                <Card.Header content={pet.name} />
+                <Card.Description>
+                <span>Birthday: {pet.birthday}</span>
+                <br />
+                <br />
+                <span>
+                 <Button href={`managepet/${pet.id}`}
+                 color='blue'
+                 size='tiny'
+                 content = 'MANAGE MY PET'
+                 style={styles.black}
+                 />
+                </span>
+                <br />
+                </Card.Description>
+              </Card.Content>
+            </Card>
+          </Grid.Column>
+        </Grid.Row>
 
       )
     });
@@ -66,11 +56,16 @@ class Pets extends Component {
         </Header>
         <Image src={Dog} alt='Dog' centered />
         <br />
-        { this.display() }
+        <Grid class='ui equal width grid' container columns={2} centered>
+
+            { this.display() }
+
+        </Grid>
       </Segment>
-    );
+    )
   }
 }
+
 
 const styles = {
   black: { color: 'black' },

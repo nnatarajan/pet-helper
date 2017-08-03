@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Segment, Menu, Image, Table, Button} from 'semantic-ui-react';
+import { Header, Segment, Image, Button, Grid, Card} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
 import Kittens from '../images/kittens.jpg';
 
@@ -14,35 +14,51 @@ class ManagePet extends Component {
     let pet = this.props.pet;
     return (
 
-        <Table.Row>
-          <Table.Cell as='h2'>{pet.name}</Table.Cell>
-          <Table.Cell as='h3'>Species: {pet.species}</Table.Cell>
-          <Table.Cell  as='h3'>Birthday: {pet.birthday}</Table.Cell>
-          <Table.Cell  as='h3'>Notes: {pet.notes}</Table.Cell>
-        </Table.Row>
+      <Grid.Row class='row'>
+      <Grid.Column class='column'>
+          <Card class='ui segment' style={styles.black} color='grey' fluid>
+            <Card.Content>
+            <Card.Header content={pet.name} />
+
+            <Card.Description>
+
+            <span>Species:  {pet.species}</span>
+            <br />
+
+            <span>Birthday:  {pet.birthday}</span>
+            <br />
+
+            <span>Notes:  {pet.notes}</span>
+            <br />
+
+          </Card.Description>
+          </Card.Content>
+        </Card>
+      </Grid.Column>
+      </Grid.Row>
+
     )
   }
 
 
   render() {
     return(
-      <div>
-      <Segment basic textAlign='center' computer={8} tablet={16} mobile={16}>
-        <Header as='h1' textAlign='center'>Manage My Pet</Header>
+      <Segment textAlign='center'>
+      <Header as='h1' textAlign='center'>
+        <strong>Manage My Pet</strong>
+      </Header>
         <Image src={ Kittens } alt='Kitten' centered />
-      </Segment>
+      <br />
+      <Grid class='ui equal width grid' container columns={2} centered>
 
-        <Table padded='very' computer={8} tablet={16} mobile={16}>
-        <Table.Body>
         { this.display() }
-        </Table.Body>
-
         <br />
-        <Button href={`/reminders/${this.props.match.params.petid}`} fluid color='red' content = 'CREATE REMINDERS' style={styles.black}
+        <Button  href={`/reminders/${this.props.match.params.petid}`}  color='blue' content = 'CREATE REMINDERS' style={styles.black}
         />
-        </Table>
-      </div>
-    );
+
+      </Grid>
+      </Segment>
+    )
   }
 }
 
