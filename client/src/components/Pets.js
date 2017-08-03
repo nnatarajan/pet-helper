@@ -20,9 +20,9 @@ class Pets extends Component {
       return (
 
         <div className='row'>
-          <div className="col s12 m6">
+          <div className="col s12">
           <br />
-          <div className='card teal accent-2 center-align'>
+          <Card className='card teal accent-2 center-align'>
           <div className='card-content'>
             <span className="card-title">
               <h2>{pet.name}</h2>
@@ -36,7 +36,7 @@ class Pets extends Component {
             </span>
 
             </div>
-          </div>
+          </Card>
           </div>
         </div>
       )
@@ -45,16 +45,17 @@ class Pets extends Component {
 
   render() {
     return(
+
       <div>
         <div class="row">
-        <div class="col s12">
-        <br />
-        <Header textAlign='center'>
-          <h1><strong>My Pets</strong></h1>
-        </Header>
-        <br/>
-        <Image src={Dog} alt='Dog' centered />
-        </div>
+          <div class="col s12">
+          <br />
+          <Header textAlign='center'>
+            <h1><strong>My Pets</strong></h1>
+          </Header>
+          <br/>
+          <Image src={Dog} alt='Dog' centered />
+          </div>
         </div>
         <br />
           { this.display() }

@@ -18,44 +18,41 @@ class ManagePet extends Component {
       <div class='row'>
         <div class="col s12 m6">
         <br />
-          <div className="card teal accent-2">
-
-            <span className="card-title"><h2>{pet.name}</h2></span>
-
+          <div className="card teal accent-2 center-align" >
             <div className="card-content">
-              <h4>
+            <span className="card-title"><h2>{pet.name}</h2></span>
+            <h4>
               <p>Species:  {pet.species}</p>
               <p>Birthday:  {pet.birthday}</p>
               <p>Notes:  {pet.notes}</p>
-              </h4>
+            </h4>
             </div>
-
             <div className="card-action">
               <Button className='grey lighten-2' >
-              <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>CREATE REMINDERS</a>
+                <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>CREATE REMINDERS</a>
               </Button>
             </div>
-
-            <br />
-
           </div>
         </div>
       </div>
-    )
+)
   }
 
   render() {
     return(
-      <Segment>
-        <Header as='h1' textAlign='center'>
-          <strong>Manage My Pet</strong>
+      <div>
+        <div class="row">
+          <div class="col s12">
+            <br />
+        <Header textAlign='center'>
+          <h1><strong>Manage My Pet</strong></h1>
         </Header>
         <Image src={ Kittens } alt='Kitten' centered />
+      </div>
+      </div>
         <br />
-        <Grid class='ui equal width grid' container columns={2} centered>
           { this.display() }
-        </Grid>
-      </Segment>
+      </div>
     )
   }
 }
