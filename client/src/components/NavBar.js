@@ -14,13 +14,12 @@ class NavBar extends Component {
 
         <Menu.Menu position='right'>
           <Link to='/pets'>
-            <Menu.Item as='h4' name='View Pets' />
+            <Menu.Item name='View Pets' />
           </Link>
           <Link to='/addpet'>
-            <Menu.Item as='h4' name='AddPet' />
+            <Menu.Item name='AddPet' />
           </Link>
-          <Menu.Item as='h4'
-            name='Logout'
+          <Menu.Item name='Logout'
             onClick={() => dispatch(handleLogout(history))}
           />
         </Menu.Menu>
@@ -29,10 +28,10 @@ class NavBar extends Component {
       return(
         <Menu.Menu position='right' >
           <Link to='/register'>
-            <Menu.Item as='h4' name='Register' />
+            <Menu.Item name='Register' />
           </Link>
           <Link to='/login'>
-            <Menu.Item as='h4' name='Login' />
+            <Menu.Item name='Login' />
           </Link>
         </Menu.Menu>
       );
@@ -45,10 +44,10 @@ class NavBar extends Component {
         <div class="col s12">
         <Menu pointing secondary >
           <Link to='/'>
-            <Menu.Item as='h4' name='home' />
+            <Menu.Item name='home' />
           </Link>
           <Link to='/adoptions'>
-            <Menu.Item as='h4' name='Pet Adoption' />
+            <Menu.Item name='Pet Adoption' />
           </Link>
           { this.rightNavs() }
         </Menu>
