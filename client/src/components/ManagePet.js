@@ -14,49 +14,47 @@ class ManagePet extends Component {
     let pet = this.props.pet;
     return (
 
-      <Grid.Row class='row'>
-      <Grid.Column class='column'>
-          <Card class='ui segment' style={styles.black} color='grey' fluid>
-            <Card.Content>
-            <Card.Header content={pet.name} />
-
-            <Card.Description>
-
-            <span>Species:  {pet.species}</span>
+        <div class='row'>
+          <div class="col s12 m6">
+          <br />
+          <Card className='teal accent-2'>
+            <span class="card-title">
+              <h2>{pet.name}</h2>
+            <div class='card-content' textAlign='left'>
+            <span>
+              <p style={styles.black}>
+              <span>Species:  {pet.species}</span>
+              <br />
+              <span>Birthday:  {pet.birthday}</span>
+              <br />
+              <span>Notes:  {pet.notes}</span>
+              <br />
+              </p>
+              <Button className='grey lighten-2'>
+              <a href={`/reminders/${this.props.match.params.petid}`}  >CREATE REMINDERS</a>
+              <br />
+              </Button>
+            </span>
             <br />
-
-            <span>Birthday:  {pet.birthday}</span>
-            <br />
-
-            <span>Notes:  {pet.notes}</span>
-            <br />
-
-          </Card.Description>
-          </Card.Content>
-        </Card>
-      </Grid.Column>
-      </Grid.Row>
-
-    )
+            </div>
+          </span>
+          </Card>
+          </div>
+        </div>
+      )
   }
-
 
   render() {
     return(
       <Segment textAlign='center'>
-      <Header as='h1' textAlign='center'>
-        <strong>Manage My Pet</strong>
-      </Header>
+        <Header as='h1' textAlign='center'>
+          <strong>Manage My Pet</strong>
+        </Header>
         <Image src={ Kittens } alt='Kitten' centered />
-      <br />
-      <Grid class='ui equal width grid' container columns={2} centered>
-
-        { this.display() }
         <br />
-        <Button  href={`/reminders/${this.props.match.params.petid}`}  color='blue' content = 'CREATE REMINDERS' style={styles.black}
-        />
-
-      </Grid>
+        <Grid class='ui equal width grid' container columns={2} centered>
+          { this.display() }
+        </Grid>
       </Segment>
     )
   }
