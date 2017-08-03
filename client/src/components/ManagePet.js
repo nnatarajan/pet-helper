@@ -18,26 +18,30 @@ class ManagePet extends Component {
           <div class="col s12 m6">
           <br />
           <Card className='teal accent-2'>
+
             <span class="card-title">
               <h2>{pet.name}</h2>
-            <div class='card-content' textAlign='left'>
-            <span>
-              <p style={styles.black}>
-              <span>Species:  {pet.species}</span>
-              <br />
-              <span>Birthday:  {pet.birthday}</span>
-              <br />
-              <span>Notes:  {pet.notes}</span>
-              <br />
-              </p>
+            </span>
+
+            <br />
+
+            <span class='card-content' >
+            <h4>
+              <p>Species:  {pet.species}</p>
+
+              <p>Birthday:  {pet.birthday}</p>
+
+              <p>Notes:  {pet.notes}</p>
+
+            </h4>
               <Button className='grey lighten-2'>
               <a href={`/reminders/${this.props.match.params.petid}`}  >CREATE REMINDERS</a>
               <br />
               </Button>
-            </span>
+
             <br />
-            </div>
           </span>
+
           </Card>
           </div>
         </div>

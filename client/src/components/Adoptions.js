@@ -18,7 +18,6 @@ class Adoptions extends Component {
         console.log(this.state);
       })
       .catch( res => {
-        alert('adoptions call failed');
         console.log(res);
       })
   }
