@@ -26,7 +26,7 @@ class Pets extends Component {
         <div className='row'>
           <div className="col s12">
           <br />
-          <Card className='card teal accent-2 center-align'>
+          <Card className='card light-blue lighten-3 center-align'>
           <div className='card-content'>
             <span className="card-title">
               <h2>{pet.name}</h2>
@@ -34,8 +34,8 @@ class Pets extends Component {
             <br />
 
             <div className="card-action">
-              <Button className='grey lighten-2 btn-large' >
-              <a href={`managepet/${pet.id}`} style={styles.black}>PET INFO</a>
+              <Button className='light-blue btn-large' >
+              <a href={`managepet/${pet.id}`} style={styles.black}><strong>PET INFO</strong></a>
               </Button>
             </div>
 
