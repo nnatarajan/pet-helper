@@ -3,13 +3,12 @@ import { connect } from 'react-redux';
 import { Header,
         Grid,
         Segment,
-        Image,
-        Card
+        Image
       }
         from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
 import Dog from '../images/dog2.jpeg';
-import { Button } from 'react-materialize';
+import { Card, Button } from 'react-materialize';
 
 class Pets extends Component {
   componentDidMount() {
@@ -20,23 +19,24 @@ class Pets extends Component {
     return this.props.pets.map(pet => {
       return (
 
-        <div class='row'>
-          <div class="col s12 m6">
+        <div className='row'>
+          <div className="col s12 m6">
           <br />
-          <Card className='teal accent-2'>
-            <span class="card-title">
+          <div className='card teal accent-2'>
+          <div className='card-content'>
+            <span className="card-title">
               <h2>{pet.name}</h2>
             </span>
-            <div class='card-content'>
             <br />
+
             <span>
               <Button className='grey lighten-2'>
               <a href={`managepet/${pet.id}`} >MANAGE MY PET</a>
               </Button>
             </span>
-            <br />
+
             </div>
-          </Card>
+          </div>
           </div>
         </div>
       )
@@ -45,16 +45,20 @@ class Pets extends Component {
 
   render() {
     return(
-      <Segment textAlign='center'>
-        <Header as='h1' textAlign='center'>
-          <strong>My Pets</strong>
-        </Header>
-        <Image src={Dog} alt='Dog' centered />
+      <div>
+        <div class="row">
+        <div class="col s12">
         <br />
-        <Grid class='ui equal width grid' container columns={2} centered>
+        <Header textAlign='center'>
+          <h1><strong>My Pets</strong></h1>
+        </Header>
+        <br/>
+        <Image src={Dog} alt='Dog' centered />
+        </div>
+        </div>
+        <br />
           { this.display() }
-        </Grid>
-      </Segment>
+      </div>
     )
   }
 }
