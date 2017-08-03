@@ -18,9 +18,9 @@ class ManagePet extends Component {
       <div class='row'>
         <div class="col s12 m6">
         <br />
-          <div className="card teal accent-2 center-align" >
-            <div className="card-content">
+          <Card className="card teal accent-2 left-align" >
             <span className="card-title"><h2>{pet.name}</h2></span>
+            <div className="card-content">
             <h4>
               <p>Species:  {pet.species}</p>
               <p>Birthday:  {pet.birthday}</p>
@@ -32,7 +32,7 @@ class ManagePet extends Component {
                 <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>CREATE REMINDERS</a>
               </Button>
             </div>
-          </div>
+          </Card>
         </div>
       </div>
 )
@@ -47,6 +47,7 @@ class ManagePet extends Component {
         <Header textAlign='center'>
           <h1><strong>Manage My Pet</strong></h1>
         </Header>
+      <br />
         <Image src={ Kittens } alt='Kitten' centered />
       </div>
       </div>
