@@ -30,8 +30,8 @@ class Pets extends Component {
             <br />
 
             <span>
-              <Button className='grey lighten-2'>
-              <a href={`managepet/${pet.id}`} >MANAGE MY PET</a>
+              <Button className='grey lighten-2 btn-large' >
+              <a href={`managepet/${pet.id}`} style={styles.black}>PET INFO</a>
               </Button>
             </span>
 
@@ -64,6 +64,9 @@ class Pets extends Component {
   }
 }
 
+const styles = {
+  black: { color: 'black' },
+}
 
 const mapStateToProps = (state) => {
   return { pets: state.pets };
