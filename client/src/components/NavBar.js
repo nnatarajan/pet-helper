@@ -12,7 +12,7 @@ class NavBar extends Component {
     if(user.id) {
       return(
 
-        <Menu.Menu position='left'>
+        <Menu.Menu position='right'>
           <Link to='/pets'>
             <Menu.Item as='h4' name='View Pets' />
           </Link>

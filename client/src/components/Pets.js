@@ -22,7 +22,7 @@ class Pets extends Component {
         <div className='row'>
           <div className="col s12 m6">
           <br />
-          <div className='card teal accent-2'>
+          <div className='card teal accent-2 center-align'>
           <div className='card-content'>
             <span className="card-title">
               <h2>{pet.name}</h2>
