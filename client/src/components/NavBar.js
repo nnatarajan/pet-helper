@@ -11,6 +11,7 @@ class NavBar extends Component {
 
     if(user.id) {
       return(
+
         <Menu.Menu position='left'>
           <Link to='/pets'>
             <Menu.Item as='h4' name='View Pets' />
@@ -40,7 +41,8 @@ class NavBar extends Component {
 
   render() {
     return (
-      <div>
+      <div class="row">
+        <div class="col s12">
         <Menu pointing secondary >
           <Link to='/'>
             <Menu.Item as='h4' name='home' />
@@ -50,6 +52,7 @@ class NavBar extends Component {
           </Link>
           { this.rightNavs() }
         </Menu>
+        </div>
       </div>
     )
   }

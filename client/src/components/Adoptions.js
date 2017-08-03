@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Header, Segment, Grid, Image, Card } from 'semantic-ui-react';
+import { Header, Segment, Grid, Image} from 'semantic-ui-react';
 import Kitty from '../images/adoption.jpg';
+import { Card, CardTitle, Col } from 'react-materialize';
 
 class Adoptions extends Component {
   constructor(props) {
@@ -25,59 +26,57 @@ class Adoptions extends Component {
     return this.state.adoptions.map( adoptions => {
       return (
 
-        <Grid.Row class='row'>
-        <Grid.Column class='column'>
-            <Card class='ui segment' style={styles.black} color='green' fluid>
-              <Card.Content>
-              <Card.Header content={adoptions.name.$t} />
 
-              <Card.Description>
+        <div class='row'>
+          <div class="col s12 m6">
+            <br />
+            <Card className='teal accent-2'>
 
-              <span>{adoptions.address1.$t}</span>
-              <br />
+              <span class="card-title">
+                <h2>{adoptions.name.$t}</h2>
+              </span>
 
-              <span>{adoptions.city.$t}, {adoptions.state.$t}, {adoptions.zip.$t}</span>
-              <br />
+              <div class='card-content'>
+              <h4>
+              <p>{adoptions.city.$t}, {adoptions.state.$t} {adoptions.zip.$t}</p>
 
-              <span>{adoptions.email.$t}</span>
-              <br />
+              <p>{adoptions.email.$t}</p>
 
-              <span>{adoptions.phone.$t}</span>
-              <br />
-            </Card.Description>
-            </Card.Content>
+              <p>{adoptions.phone.$t}</p>
+            </h4>
+              </div>
+
           </Card>
-        </Grid.Column>
-        </Grid.Row>
-
-
-
-
-
+        </div>
+        </div>
       )
     });
   }
 
   render() {
     return (
-      <Segment textAlign='center'>
-        <Header as='h1' textAlign='center'>
-          <strong>Pet Adoption Shelters</strong>
-        </Header>
-        <Image src={Kitty} alt='kitten' centered />
+      <div>
+        <div class="row">
+          <div class="col s12">
+            <br />
+            <Header textAlign='center'>
+            <h1><strong>Pet Adoption Shelters</strong></h1>
+            </Header>
+
+            <br />
+
+            <Image src={Kitty} alt='kitten' centered />
+          </div>
+        </div>
         <br />
-        <Grid class='ui equal width grid' container columns={2} centered>
 
             { this.display() }
 
-        </Grid>
-      </Segment>
+      </div>
     )
   }
 }
 
-const styles = {
-  black: { color: 'black' },
-}
+
 
 export default Adoptions;
