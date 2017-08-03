@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Segment, Image, Button, Grid, Card} from 'semantic-ui-react';
+import { Header, Segment, Image, Button, Grid } from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
 import Kittens from '../images/kittens.jpg';
+import { Card } from 'react-materialize';
 
 class ManagePet extends Component {
   componentDidMount() {
@@ -14,38 +15,28 @@ class ManagePet extends Component {
     let pet = this.props.pet;
     return (
 
-        <div class='row'>
-          <div class="col s12 m6">
-          <br />
-          <Card className='teal accent-2'>
-
-            <span class="card-title">
-              <h2>{pet.name}</h2>
-            </span>
-
-            <br />
-
-            <span class='card-content' >
+      <div class='row'>
+        <div class="col s12 m6">
+        <br />
+          <div className="card teal accent-2">
+            <div className="card-content">
+            <span class="card-title"><h2>{pet.name}</h2></span>
             <h4>
-              <p>Species:  {pet.species}</p>
-
-              <p>Birthday:  {pet.birthday}</p>
-
-              <p>Notes:  {pet.notes}</p>
-
+            <p>Species:  {pet.species}</p>
+            <p>Birthday:  {pet.birthday}</p>
+            <p>Notes:  {pet.notes}</p>
             </h4>
-              <Button className='grey lighten-2'>
-              <a href={`/reminders/${this.props.match.params.petid}`}  >CREATE REMINDERS</a>
-              <br />
-              </Button>
-
+            <div className="card-action">
+            <Button className='grey lighten-2' >
+            <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>CREATE REMINDERS</a>
+            </Button>
+            </div>
             <br />
-          </span>
-
-          </Card>
+            </div>
           </div>
         </div>
-      )
+      </div>
+    )
   }
 
   render() {
