@@ -4,12 +4,12 @@ import { Header,
         Grid,
         Segment,
         Image,
-        Button,
         Card
       }
         from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
 import Dog from '../images/dog2.jpeg';
+import { Button } from 'react-materialize';
 
 class Pets extends Component {
   componentDidMount() {
@@ -21,32 +21,27 @@ class Pets extends Component {
       return (
 
         <div class='row'>
-     <div class="col s12 m6">
-       <br />
-       <Card className='teal accent-2'>
-
-         <span class="card-title">
-           <h2>{pet.name}</h2>
-         </span>
-
-         <div class='card-content'>
-           <br />
-           <span>
-            <Button href={`managepet/${pet.id}`}
-            color='blue'
-            size='tiny'
-            content = 'MANAGE MY PET'
-            />
-           </span>
-           <br />
-         </div>
-
-     </Card>
-   </div>
-   </div>
- )
-});
-}
+          <div class="col s12 m6">
+          <br />
+          <Card className='teal accent-2'>
+            <span class="card-title">
+              <h2>{pet.name}</h2>
+            </span>
+            <div class='card-content'>
+            <br />
+            <span>
+              <Button className='grey lighten-2'>
+              <a href={`managepet/${pet.id}`} >MANAGE MY PET</a>
+              </Button>
+            </span>
+            <br />
+            </div>
+          </Card>
+          </div>
+        </div>
+      )
+    });
+  }
 
   render() {
     return(
@@ -57,9 +52,7 @@ class Pets extends Component {
         <Image src={Dog} alt='Dog' centered />
         <br />
         <Grid class='ui equal width grid' container columns={2} centered>
-
-            { this.display() }
-
+          { this.display() }
         </Grid>
       </Segment>
     )
