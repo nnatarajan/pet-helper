@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Header, Segment, Image } from 'semantic-ui-react';
+import { Header, Grid, Image } from 'semantic-ui-react';
+import { Col } from 'react-materialize';
 import '../styles/flash.css';
 // import {HomeImage} from './HomeImage';
 import Dog from '../images/dog.jpeg';
@@ -7,10 +8,16 @@ import Dog from '../images/dog.jpeg';
 class Home extends Component {
   render() {
     return(
-  <Segment basic textAlign='center'>
-    <Header as='h1' textAlign='center'>Welcome to Pet Care!</Header>
-    <Image src={Dog} alt='Dog' fluid />
-  </Segment>
+     <div class="row">
+       <div class="col s12">
+         <br />
+         <Header textAlign='center'>
+           <h1><strong>Welcome to Pet Care!</strong></h1>
+         </Header>
+         <br />
+         <Image src={Dog} alt='Dog' centered />
+       </div>
+     </div>
     );
   }
 }

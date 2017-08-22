@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Header, Segment, Grid, Image} from 'semantic-ui-react';
 import Kitty from '../images/adoption.jpg';
-import { Card, CardTitle, Col } from 'react-materialize';
+import { Card, CardTitle} from 'react-materialize';
 
 class Adoptions extends Component {
   constructor(props) {
@@ -59,11 +59,9 @@ class Adoptions extends Component {
           <div class="col s12">
             <br />
             <Header textAlign='center'>
-            <h1><strong>Pet Adoption Shelters</strong></h1>
+              <h1><strong>Pet Adoption Shelters</strong></h1>
             </Header>
-
             <br />
-
             <Image src={Kitty} alt='kitten' centered />
           </div>
         </div>
