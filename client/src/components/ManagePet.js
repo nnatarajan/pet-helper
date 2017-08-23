@@ -67,7 +67,7 @@ class ManagePet extends Component {
         </Row>
         <Row>
           <Col s={12}>
-        <Image src={ Kitten } alt='Kitten' centered />
+        <Image src={ Kitten } alt='Kitten' centered fluid />
           </Col>
         </Row>
 
