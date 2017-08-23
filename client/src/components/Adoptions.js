@@ -69,6 +69,7 @@ class Adoptions extends Component {
         { this.display() }
         </Card.Group>
         </Col>
+      <br />  
     </Container>
     )
   }

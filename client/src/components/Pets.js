@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Header, Image, Card, Button} from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
-import Kittens from '../images/kittens_basket.jpeg';
+import Kittens from '../images/kitten-800-800.jpeg';
 import { Row, Col, Container} from 'react-materialize';
 
 class Pets extends Component {
@@ -58,6 +58,7 @@ class Pets extends Component {
         <Card.Group centered>
           { this.display() }
         </Card.Group>
+        <br />
       </Container>
       </div>
     )
