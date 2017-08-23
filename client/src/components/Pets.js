@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Header, Image, Card, Button} from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
-import Lady from '../images/lady_pets.jpg';
+import Kittens from '../images/kittens_basket.jpeg';
 import { Row, Col, Container} from 'react-materialize';
 
 class Pets extends Component {
@@ -51,7 +51,7 @@ class Pets extends Component {
           </Row>
           <Row>
             <Col s={12}>
-              <Image src={Lady} alt='Lady with Pets' centered fluid/>
+              <Image src={Kittens} alt='Kittens in Basket' centered fluid/>
             </Col>
         </Row>
         <br />

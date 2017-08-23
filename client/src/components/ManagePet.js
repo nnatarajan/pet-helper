@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Header, Image, Button, Card, Table} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
-import Pets from '../images/pets.jpg';
+import Kitten from '../images/kitten.jpeg';
 import { Row, Col, Container } from 'react-materialize';
 
 class ManagePet extends Component {
@@ -67,7 +67,7 @@ class ManagePet extends Component {
         </Row>
         <Row>
           <Col s={12}>
-        <Image src={ Pets } alt='Pets' centered />
+        <Image src={ Kitten } alt='Kitten' centered />
           </Col>
         </Row>
 
