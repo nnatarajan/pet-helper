@@ -53,7 +53,7 @@ class Adoptions extends Component {
             <Header textAlign='center'>
               <h1><strong>Pet Adoption Shelters</strong></h1>
             </Header>
-          <br />
+
           </Col>
         </Row>
         <Row>
