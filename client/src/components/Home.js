@@ -17,7 +17,9 @@ class Home extends Component {
          <br />
          <Image src={Dog} alt='Dog' centered />
        </div>
+          <br />
      </div>
+
     );
   }
 }

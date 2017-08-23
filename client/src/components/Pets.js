@@ -7,7 +7,7 @@ import { Header,
       }
         from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
-import Dog from '../images/dog2.jpeg';
+import Lady from '../images/lady_pets.jpg';
 import { Card, Button } from 'react-materialize';
 
 class Pets extends Component {
@@ -23,22 +23,21 @@ class Pets extends Component {
     return this.props.pets.map(pet => {
       return (
 
-        <div className='row'>
-          <div className="col s12">
+        <div class='row'>
+          <div class="col s12 m6">
           <br />
-          <Card className='card light-blue lighten-3 center-align'>
-          <div className='card-content'>
-            <span className="card-title">
+          <Card className='lighten-3'>
+
+            <span class="card-title">
               <h2>{pet.name}</h2>
             </span>
             <br />
-
-            <div className="card-action">
-              <Button className='light-blue btn-large' >
-              <a href={`managepet/${pet.id}`} style={styles.black}><strong>PET INFO</strong></a>
-              </Button>
-            </div>
-
+              <div class='card-content'>
+              <div class="card-action">
+                <Button class='light-blue btn-large' >
+                <a href={`managepet/${pet.id}`} style={styles.black}><strong>PET INFO</strong></a>
+                </Button>
+              </div>
             </div>
           </Card>
           </div>
@@ -57,8 +56,8 @@ class Pets extends Component {
           <Header textAlign='center'>
             <h1><strong>My Pets</strong></h1>
           </Header>
-          <br/>
-          <Image src={Dog} alt='Dog' centered />
+
+          <Image src={Lady} alt='Lady with Pets' centered />
           </div>
         </div>
         <br />

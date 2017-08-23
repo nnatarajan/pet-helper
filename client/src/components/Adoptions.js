@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Header, Segment, Grid, Image} from 'semantic-ui-react';
+import { Header, Segment, Card, Image} from 'semantic-ui-react';
 import Kitty from '../images/adoption.jpg';
-import { Card, CardTitle} from 'react-materialize';
+import { Row, Col } from 'react-materialize';
 
 class Adoptions extends Component {
   constructor(props) {
@@ -25,29 +25,21 @@ class Adoptions extends Component {
     return this.state.adoptions.map( adoptions => {
       return (
 
+        <Card className='green lighten-3'>
 
-        <div class='row'>
-          <div class="col s12 m6">
-            <br />
-            <Card className='teal accent-2'>
+          <Card.Content>
+          <Card.Header>{adoptions.name.$t}</Card.Header>
+          <Card.Description>
+            <p>{adoptions.city.$t}, {adoptions.state.$t} {adoptions.zip.$t}</p>
 
-              <span class="card-title">
-                <h2>{adoptions.name.$t}</h2>
-              </span>
+            <p>{adoptions.email.$t}</p>
 
-              <div class='card-content'>
-              <h4>
-              <p>{adoptions.city.$t}, {adoptions.state.$t} {adoptions.zip.$t}</p>
+            <p>{adoptions.phone.$t}</p>
+          </Card.Description>
+        </Card.Content>
+        </Card>
 
-              <p>{adoptions.email.$t}</p>
 
-              <p>{adoptions.phone.$t}</p>
-            </h4>
-              </div>
-
-          </Card>
-        </div>
-        </div>
       )
     });
   }
@@ -55,20 +47,25 @@ class Adoptions extends Component {
   render() {
     return (
       <div>
-        <div class="row">
-          <div class="col s12">
-            <br />
+        <Row>
+          <Col s={12}>
+          <br />
             <Header textAlign='center'>
               <h1><strong>Pet Adoption Shelters</strong></h1>
             </Header>
-            <br />
-            <Image src={Kitty} alt='kitten' centered />
-          </div>
-        </div>
+          <br />
+          </Col>
+        </Row>
+        <Row>
+          <Col s={12}>
+            <Image src={Kitty} alt='kitten' centered fluid/>
+          </Col>
+        </Row>
+
         <br />
-
-            { this.display() }
-
+        <Card.Group>
+        { this.display() }
+      </Card.Group>
       </div>
     )
   }
