@@ -18,7 +18,7 @@ class Pets extends Component {
     return this.props.pets.map(pet => {
       return (
 
-        <Card className='cyan lighten-5'>
+        <Card fluid className='cyan lighten-5'>
 
           <Card.Content>
             <Card.Header>{pet.name}</Card.Header>
