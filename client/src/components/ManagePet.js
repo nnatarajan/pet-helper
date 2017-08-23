@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Image, Button, Card} from 'semantic-ui-react';
+import { Header, Image, Button, Card, Table} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
 import Pets from '../images/pets.jpg';
 import { Row, Col, Container } from 'react-materialize';
+
+const colors = [
+  'purple'
+]
 
 class ManagePet extends Component {
   componentDidMount() {
@@ -11,19 +15,35 @@ class ManagePet extends Component {
     dispatch(fetchSelectedPet(params.petid));
   }
 
+
   display = () => {
     let pet = this.props.pet;
     return (
 
-      <Card centered className="card teal accent-2 center-align fluid" >
+      <Card fluid centered className="card purple lighten-5 center-align" >
         <Card.Content>
-          <Card.Header>{pet.name}</Card.Header>
+          <Card.Header><h1>{pet.name}</h1></Card.Header>
         </Card.Content>
         <Card.Content>
         <Card.Description>
-          <p><strong>Species:</strong>  {pet.species}</p>
-          <p><strong>Birthday:</strong>  {pet.birthday}</p>
-          <p><strong>Notes:</strong>  {pet.notes}</p>
+          {colors.map(color =>
+          <Table color={color} key={color} inverted>
+            <Table.Header>
+              <Table.Row>
+                <Table.HeaderCell>Species</Table.HeaderCell>
+                <Table.HeaderCell>Birthday</Table.HeaderCell>
+                <Table.HeaderCell>Notes</Table.HeaderCell>
+              </Table.Row>
+            </Table.Header>
+            <Table.Body>
+              <Table.Row>
+                <Table.Cell>{pet.species}</Table.Cell>
+                <Table.Cell>{pet.birthday}</Table.Cell>
+                <Table.Cell>{pet.notes}</Table.Cell>
+              </Table.Row>
+            </Table.Body>
+          </Table>
+        )}
         </Card.Description>
         </Card.Content>
         <Card.Content extra>
