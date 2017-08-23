@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Image, Card} from 'semantic-ui-react';
+import { Header, Image, Card, Button} from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
 import Lady from '../images/lady_pets.jpg';
-import { Row, Col, Button, Container} from 'react-materialize';
+import { Row, Col, Container} from 'react-materialize';
 
 class Pets extends Component {
   constructor(props) {
@@ -18,15 +18,16 @@ class Pets extends Component {
     return this.props.pets.map(pet => {
       return (
 
-        <Card className='cyan lighten-5'>
+        <Card centered className='cyan lighten-5'>
 
           <Card.Content>
             <Card.Header>{pet.name}</Card.Header>
-            <Card.Description>
-              <Button className='cyan lighten-3'>
-              <a href={`managepet/${pet.id}`} style={styles.black}><strong>PET INFO</strong></a>
+          </Card.Content>
+          <Card.Content extra>
+              <Button
+                className='cyan lighten-3'>
+                <a href={`managepet/${pet.id}`} style={styles.black}><strong>Click Here for Summary</strong></a>
               </Button>
-            </Card.Description>
           </Card.Content>
 
         </Card>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Header, Segment, Card, Image} from 'semantic-ui-react';
+import { Header, Card, Image} from 'semantic-ui-react';
 import Kitty from '../images/adoption.jpg';
 import { Row, Col, Container } from 'react-materialize';
 
@@ -25,7 +25,7 @@ class Adoptions extends Component {
     return this.state.adoptions.map( adoptions => {
       return (
 
-        <Card className='green lighten-3'>
+        <Card centered className='green lighten-3'>
 
           <Card.Content>
           <Card.Header>{adoptions.name.$t}</Card.Header>

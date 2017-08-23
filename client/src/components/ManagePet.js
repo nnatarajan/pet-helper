@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Segment, Image, Button, Grid } from 'semantic-ui-react';
+import { Header, Image, Button, Card} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
 import Pets from '../images/pets.jpg';
-import { Card } from 'react-materialize';
+import { Row, Col, Container } from 'react-materialize';
 
 class ManagePet extends Component {
   componentDidMount() {
@@ -15,45 +15,51 @@ class ManagePet extends Component {
     let pet = this.props.pet;
     return (
 
-      <div class='row'>
-        <div class="col s12 m6">
-        <br />
-          <Card className="card teal accent-2 left-align" >
-            <span className="card-title"><h2>{pet.name}</h2></span>
-            <div className="card-content">
-            <h4>
-              <p>Species:  {pet.species}</p>
-              <p>Birthday:  {pet.birthday}</p>
-              <p>Notes:  {pet.notes}</p>
-            </h4>
-            </div>
-            <div className="card-action">
-              <Button className='grey lighten-2 btn-large' >
-                <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>Create Reminders</a>
-              </Button>
-            </div>
-          </Card>
-        </div>
-      </div>
+      <Card centered className="card teal accent-2 center-align fluid" >
+        <Card.Content>
+          <Card.Header>{pet.name}</Card.Header>
+        </Card.Content>
+        <Card.Content>
+        <Card.Description>
+          <p><strong>Species:</strong>  {pet.species}</p>
+          <p><strong>Birthday:</strong>  {pet.birthday}</p>
+          <p><strong>Notes:</strong>  {pet.notes}</p>
+        </Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <Button className='grey lighten-2' >
+            <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>Click to Create Reminders</a>
+          </Button>
+
+        </Card.Content>
+      </Card>
+
 )
   }
 
   render() {
     return(
-      <div>
-        <div class="row">
-          <div class="col s12">
+
+      <Container>
+        <Row>
+          <Col s={12}>
             <br />
-        <Header textAlign='center'>
-          <h1><strong>Manage My Pet</strong></h1>
-        </Header>
-      <br />
+          <Header textAlign='center'>
+            <h1><strong>Manage My Pet</strong></h1>
+          </Header>
+          </Col>
+        </Row>
+        <Row>
+          <Col s={12}>
         <Image src={ Pets } alt='Pets' centered />
-      </div>
-      </div>
+          </Col>
+        </Row>
+
         <br />
+        <Col s12>
           { this.display() }
-      </div>
+        </Col>
+    </Container>
     )
   }
 }
