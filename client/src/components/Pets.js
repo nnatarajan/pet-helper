@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Header, Image, Card} from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
 import Lady from '../images/lady_pets.jpg';
-import { Row, Col, Button} from 'react-materialize';
+import { Row, Col, Button, Container} from 'react-materialize';
 
 class Pets extends Component {
   constructor(props) {
@@ -39,6 +39,7 @@ class Pets extends Component {
     return(
 
       <div>
+      <Container>
         <Row>
           <Col s={12}>
           <br />
@@ -49,13 +50,14 @@ class Pets extends Component {
           </Row>
           <Row>
             <Col s={12}>
-              <Image src={Lady} alt='Lady with Pets' centered />
+              <Image src={Lady} alt='Lady with Pets' centered fluid/>
             </Col>
         </Row>
         <br />
-        <Card.Group>
+        <Card.Group centered>
           { this.display() }
         </Card.Group>
+      </Container>
       </div>
     )
   }

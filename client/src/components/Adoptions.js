@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios'
 import { Header, Segment, Card, Image} from 'semantic-ui-react';
 import Kitty from '../images/adoption.jpg';
-import { Row, Col } from 'react-materialize';
+import { Row, Col, Container } from 'react-materialize';
 
 class Adoptions extends Component {
   constructor(props) {
@@ -46,7 +46,8 @@ class Adoptions extends Component {
 
   render() {
     return (
-      <div>
+
+      <Container>
         <Row>
           <Col s={12}>
           <br />
@@ -63,10 +64,12 @@ class Adoptions extends Component {
         </Row>
 
         <br />
-        <Card.Group>
+        <Col s4>
+        <Card.Group >
         { this.display() }
-      </Card.Group>
-      </div>
+        </Card.Group>
+        </Col>
+    </Container>
     )
   }
 }
