@@ -5,10 +5,6 @@ import { fetchSelectedPet } from '../actions/pets';
 import Pets from '../images/pets.jpg';
 import { Row, Col, Container } from 'react-materialize';
 
-const colors = [
-  'purple'
-]
-
 class ManagePet extends Component {
   componentDidMount() {
     let { dispatch, match: { params } } = this.props;
@@ -26,9 +22,9 @@ class ManagePet extends Component {
         </Card.Content>
         <Card.Content>
         <Card.Description>
-          {colors.map(color =>
-          <Table color={color} key={color} inverted>
-            <Table.Header>
+
+          <Table unstackable className="purple lighten-4">
+            <Table.Header >
               <Table.Row>
                 <Table.HeaderCell>Species</Table.HeaderCell>
                 <Table.HeaderCell>Birthday</Table.HeaderCell>
@@ -43,11 +39,11 @@ class ManagePet extends Component {
               </Table.Row>
             </Table.Body>
           </Table>
-        )}
+
         </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Button className='grey lighten-2' >
+          <Button className="purple lighten-3" >
             <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>Click to Create Reminders</a>
           </Button>
 
@@ -76,7 +72,7 @@ class ManagePet extends Component {
         </Row>
 
         <br />
-        <Col s12>
+        <Col>
           { this.display() }
         </Col>
     </Container>
