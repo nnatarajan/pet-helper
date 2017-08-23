@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Header, Image, Button, Card, Table} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
-import Kitten from '../images/kitten_snow.jpeg';
+import Kitten from '../images/kitten_blue_eyes.jpeg';
 import { Row, Col, Container } from 'react-materialize';
 
 class ManagePet extends Component {
