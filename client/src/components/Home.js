@@ -12,7 +12,7 @@ class Home extends Component {
        <div class="col s12">
          <br />
          <Header textAlign='center'>
-           <h1><strong>Welcome to Pet Care!</strong></h1>
+           <h1><strong>Welcome to Pet Helper!</strong></h1>
          </Header>
          <br />
          <Image src={Dog} alt='Dog' centered />
