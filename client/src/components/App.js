@@ -14,7 +14,8 @@ import InfoGuides from './InfoGuides';
 import Reminders from './Reminders';
 import AddPet from './AddPet';
 import ManagePet from './ManagePet';
-import './App.css';
+import About from './About';
+import '../styles/main.css';
 
 class App extends Component {
   render() {
@@ -34,6 +35,7 @@ class App extends Component {
             <Route exact path='/info' component={InfoGuides} />
             <ProtectedRoute exact path='/reminders/:petid' component={Reminders} />
             <Route exact path='/adoptions' component={Adoptions} />
+            <Route exact path='/about' component={About} />
 
             <Route component={NoMatch} />
           </Switch>

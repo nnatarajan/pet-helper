@@ -42,12 +42,15 @@ class NavBar extends Component {
     return (
       <div class="row">
         <div class="col s12">
-        <Menu pointing secondary >
+        <Menu stackable pointing secondary >
           <Link to='/'>
             <Menu.Item name='home' />
           </Link>
+          <Link to='/about'>
+            <Menu.Item name='About' />
+          </Link>
           <Link to='/adoptions'>
-            <Menu.Item name='Pet Adoption' />
+            <Menu.Item name='Adoption' />
           </Link>
           { this.rightNavs() }
         </Menu>
