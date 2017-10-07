@@ -24,7 +24,7 @@ const About = () => (
 <Col s={12}>
 <br />
 <p textAlign='center'>
-Hello! Welcome to Pet Helper! I have designed and built this web application with the sole purpose of assisting pet owners in taking the best care of their pets. The main features of this app are finding a new pet, storing & viewing pet information, and setting up reminders. Currently, I am working on adding more features and making improvements to Pet Helper. Please note that you may need to delete your browser history or change to a different browser to view the the most current version.
+Hello! Welcome to Pet Helper! I have designed and built this web application with the sole purpose of assisting pet owners in taking the best care of their pets. The main features of this app are finding a new pet, storing & viewing pet information, and setting up reminders. Currently, I am working on adding more features and making improvements to Pet Helper. Please note that you may need to delete your browser history or change to a different browser to view the most current version of the app.
 </p>
 </Col>
 </Row>
