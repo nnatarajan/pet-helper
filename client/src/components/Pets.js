@@ -10,6 +10,9 @@ const containerStyle = {
   marginTop: 20
 };
 
+const sectionStyle = {
+  backgroundColor: 'mintcream'
+};
 
 class Pets extends Component {
   constructor(props) {
@@ -59,9 +62,11 @@ class Pets extends Component {
             </Col>
         </Row>
         <br />
-        <Card.Group centered>
-          { this.display() }
-        </Card.Group>
+        <div textAlign='center' style={sectionStyle}>
+          <Card.Group centered>
+            { this.display() }
+          </Card.Group>
+        </div>
         <br />
       </Container>
     )
