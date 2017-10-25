@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Header, Image, Card, Button} from 'semantic-ui-react';
+import { Grid, Container, Header, Image, Card, Button} from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
 import Kittens from '../images/kitten-800-401.jpeg';
 import { Row, Col} from 'react-materialize';
@@ -13,6 +13,11 @@ const containerStyle = {
 const sectionStyle = {
   backgroundColor: 'mintcream'
 };
+
+const innerSectionStyle = {
+  margin: 20
+};
+
 
 class Pets extends Component {
   constructor(props) {
@@ -62,14 +67,18 @@ class Pets extends Component {
             </Col>
         </Row>
         <br />
-        <Col>
         <div style={sectionStyle}>
-          <Card.Group centered>
+        <Grid style={innerSectionStyle}>
+          <Grid.Row columns={1} centered>
+
+          <Card.Group>
             { this.display() }
           </Card.Group>
-        </div>
-        </Col>
+
         <br />
+        </Grid.Row>
+      </Grid>
+      </div>
       </Container>
     )
   }
