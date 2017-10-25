@@ -7,7 +7,8 @@ import { Row, Col} from 'react-materialize';
 
 const containerStyle = {
   maxWidth: 900,
-  marginTop: 20
+  marginTop: 20,
+  fontFamily: 'Roboto'
 };
 
 const sectionStyle = {
@@ -15,7 +16,9 @@ const sectionStyle = {
 };
 
 const innerSectionStyle = {
-  margin: 20
+  margin: 20,
+  fontFamily: 'Montserrat',
+  fontSize: 15
 };
 
 

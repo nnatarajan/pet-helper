@@ -5,7 +5,8 @@ import { registerUser } from '../actions/auth';
 
 const containerStyle = {
   maxWidth: 900,
-  marginTop: 15
+  marginTop: 15,
+  fontFamily: 'Roboto'
 };
 
 class Register extends Component {

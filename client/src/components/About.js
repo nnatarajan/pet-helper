@@ -7,14 +7,13 @@ import Cat from '../images/kitten-800-400.jpeg';
 const containerStyle = {
   maxWidth: 900,
   marginTop: 20,
-};
-
-const imageStyle = {
-  maxHeight: 500
+  fontFamily: 'Roboto'
 };
 
 const sectionStyle = {
-  backgroundColor: 'mintcream'
+  fontFamily: 'Montserrat',
+  backgroundColor: 'mintcream',
+  fontSize: 15
 };
 
 const About = () => (

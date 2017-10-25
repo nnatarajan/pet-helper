@@ -8,10 +8,13 @@ import { Row, Col} from 'react-materialize';
 const containerStyle = {
   maxWidth: 900,
   marginTop: 20,
+  fontFamily: 'Roboto'
 };
 
 const sectionStyle = {
-  backgroundColor: 'mintcream'
+  backgroundColor: 'mintcream',
+  fontFamily: 'Montserrat',
+  fontSize: 13
 };
 
 class Adoptions extends Component {
@@ -71,7 +74,7 @@ class Adoptions extends Component {
           </Col>
         </Row>
         <br />
-        
+
         <Col s4>
         <div style={sectionStyle}>
           <Card.Group>

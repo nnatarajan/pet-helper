@@ -6,7 +6,8 @@ import Dog from '../images/kitten-800-500.jpeg';
 
 const containerStyle = {
   maxWidth: 900,
-  marginTop: 20
+  marginTop: 20,
+  fontFamily: 'Roboto'
 };
 
 class Home extends Component {

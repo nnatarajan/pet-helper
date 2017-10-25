@@ -5,7 +5,8 @@ import { addPet } from '../actions/pets';
 
 const containerStyle = {
   maxWidth: 900,
-  marginTop: 15
+  marginTop: 15,
+  fontFamily: 'Roboto'
 };
 
 class AddPet extends Component {
