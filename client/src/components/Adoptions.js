@@ -10,7 +10,7 @@ const containerStyle = {
   marginTop: 20,
 };
 
-const cardStyle = {
+const sectionStyle = {
   backgroundColor: 'mintcream'
 };
 
@@ -73,7 +73,7 @@ class Adoptions extends Component {
 
         <br />
         <Col s4>
-        <div style={cardStyle}>
+        <div style={sectionStyle}>
         <Card.Group>
         { this.display() }
         </Card.Group>
