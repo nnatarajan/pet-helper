@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Segment, Header, Image } from 'semantic-ui-react';
 import { Row, Col} from 'react-materialize';
-import Cat from '../images/kitten-800-304.jpeg';
+import Cat from '../images/kitten-800-400.jpeg';
 
 const containerStyle = {
   maxWidth: 900,
