@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Image, Button, Card, Table} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
-import Kitten from '../images/kitten-800-400.jpeg';
+import Kitten from '../images/kitten-800-409.jpeg';
 import { Row, Col} from 'react-materialize';
 
 const containerStyle = {

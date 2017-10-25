@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Container, Header, Image, Card } from 'semantic-ui-react';
-import Kitty from '../images/adoption.jpg';
+import Kitty from '../images/kitten-800-418.jpeg';
 import { Row, Col} from 'react-materialize';
 
 
