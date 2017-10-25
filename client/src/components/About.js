@@ -41,7 +41,7 @@ const About = () => (
       <Row>
         <Col s={12}>
           <p>
-          On launch day (August 2017), a veterinary assistant approached my booth and offered me welcomed suggestions. He had stated that the most important part of pet care is immunizations. In addition, he had mentioned that too often pet owners forget how vital immunizations are for basic care. Please click on this <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet"> link </a> for more detailed information from the ASPCA. If you are considering adopting a pet, I have included a built-in API, that reflects up-to-date contact information for a list of local  <Link to='/adoptions'>  animal shelters </Link> in Salt Lake City, UT and surrounding areas. Lastly, please check out my <a href="https://nnatarajan.github.io/"> website </a>for upcoming projects.
+          On launch day, a veterinary assistant approached my booth and offered me welcomed suggestions. He had stated that the most important part of pet care is immunizations. In addition, he had mentioned that too often pet owners forget how vital immunizations are for basic care. Please click on this <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet"> link </a> for more detailed information from the ASPCA. If you are considering adopting a pet, I have included a built-in API, that reflects up-to-date contact information for a list of local  <Link to='/adoptions'>  animal shelters </Link> in Salt Lake City, UT and surrounding areas. Lastly, please check out my <a href="https://nnatarajan.github.io/"> website </a>for upcoming projects.
           </p>
         </Col>
       </Row>
