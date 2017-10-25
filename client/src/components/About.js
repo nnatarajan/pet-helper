@@ -13,7 +13,7 @@ const containerStyle = {
 const sectionStyle = {
   fontFamily: 'Montserrat',
   backgroundColor: 'mintcream',
-  fontSize: 15
+  fontSize: 'inherit'
 };
 
 const About = () => (
