@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Header, Image } from 'semantic-ui-react';
 import { Row, Col} from 'react-materialize';
 // import {HomeImage} from './HomeImage';
-import Dog from '../images/dog2.jpeg';
+import Dog from '../images/kitten-750-425.jpeg';
 
 const containerStyle = {
   maxWidth: 900,
