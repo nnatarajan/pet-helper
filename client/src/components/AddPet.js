@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { Header, Form, Button, Segment } from 'semantic-ui-react';
+import { Container, Header, Form, Button, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { addPet } from '../actions/pets';
+
+const containerStyle = {
+  maxWidth: 900,
+  marginTop: 15
+};
 
 class AddPet extends Component {
   state = { name: '', species: '', birthday: '', notes: '' };
@@ -23,54 +28,56 @@ class AddPet extends Component {
     const { name, species, birthday, notes } = this.state;
 
     return(
-      <Segment basic>
-        <Header as='h1' textAlign='center'>Add a Pet</Header>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Field>
-            <label>Name</label>
-            <input
-              id='name'
-              placeholder='Pet Name'
-              required
-              value={name}
-              onChange={this.handleChange}
-            />
-          </Form.Field>
-          <Form.Field>
-            <label>Species</label>
-            <input
-              id='species'
-              placeholder='Species'
-              required
-              value={species}
-              onChange={this.handleChange}
-            />
-          </Form.Field>
-          <Form.Field>
-            <label>Birthday</label>
-            <input
-              id='birthday'
-              placeholder='Enter Date Format: YYYY/MM/DD'
-              required
-              value={birthday}
-              onChange={this.handleChange}
-            />
-            </Form.Field>
+      <Container style={containerStyle}>
+        <Segment basic>
+          <Header as='h1' textAlign='center'>Add a Pet</Header>
+          <Form onSubmit={this.handleSubmit}>
             <Form.Field>
-              <label>About</label>
-              <textarea
-                id='notes'
-                placeholder='Write any special notes about your pet here.'
+              <label>Name</label>
+              <input
+                id='name'
+                placeholder='Pet Name'
                 required
-                value={notes}
+                value={name}
                 onChange={this.handleChange}
               />
-          </Form.Field>
-          <Segment basic textAlign='center'>
-            <Button type='submit'>Submit</Button>
-          </Segment>
-        </Form>
-      </Segment>
+            </Form.Field>
+            <Form.Field>
+              <label>Species</label>
+              <input
+                id='species'
+                placeholder='Species'
+                required
+                value={species}
+                onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Birthday</label>
+              <input
+                id='birthday'
+                placeholder='Enter Date Format: YYYY/MM/DD'
+                required
+                value={birthday}
+                onChange={this.handleChange}
+              />
+              </Form.Field>
+              <Form.Field>
+                <label>About</label>
+                <textarea
+                  id='notes'
+                  placeholder='Write any special notes about your pet here.'
+                  required
+                  value={notes}
+                  onChange={this.handleChange}
+                />
+            </Form.Field>
+            <Segment basic textAlign='center'>
+              <Button type='submit'>Submit</Button>
+            </Segment>
+          </Form>
+        </Segment>
+      </Container>
     );
   }
 }

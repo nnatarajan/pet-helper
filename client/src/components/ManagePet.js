@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Image, Button, Card, Table} from 'semantic-ui-react';
+import { Container, Header, Image, Button, Card, Table} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
 import Kitten from '../images/manage_pet.jpeg';
-import { Row, Col, Container } from 'react-materialize';
+import { Row, Col} from 'react-materialize';
+
+const containerStyle = {
+  maxWidth: 900,
+  marginTop: 20
+};
 
 class ManagePet extends Component {
   componentDidMount() {
@@ -44,7 +49,7 @@ class ManagePet extends Component {
         </Card.Content>
         <Card.Content extra>
           <Button className="purple lighten-3" >
-            <a href={`/reminders/${this.props.match.params.petid}`}  style={styles.black}>Click to Create Reminders</a>
+            <a href={`/reminders/${this.props.match.params.petid}`}>Click to Create Reminders</a>
           </Button>
 
         </Card.Content>
@@ -56,10 +61,9 @@ class ManagePet extends Component {
   render() {
     return(
 
-      <Container>
+      <Container text style={containerStyle}>
         <Row>
           <Col s={12}>
-            <br />
           <Header textAlign='center'>
             <h1><strong>Manage My Pet</strong></h1>
           </Header>
@@ -81,9 +85,6 @@ class ManagePet extends Component {
   }
 }
 
-const styles = {
-  black: { color: 'black' },
-}
 
 const mapStateToProps = (state) => {
   return { pet: state.pets };

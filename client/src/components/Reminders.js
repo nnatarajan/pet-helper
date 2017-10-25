@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {
+        Container,
         Header,
         Form,
         Button,
@@ -28,6 +29,12 @@ import { addReminder } from '../actions/reminders';
 // { key: 'yearly', text: 'Yearly', value: 'yearly'},
 // ]
 
+const containerStyle = {
+  maxWidth: 900,
+  marginTop: 15
+};
+
+
 class Reminders extends Component {
   state = { reminder_type: '', date_time: '', repeat: true, repeat_pattern: 'yearly'};
 
@@ -51,44 +58,47 @@ class Reminders extends Component {
     const { reminder_type, date_time, repeat, repeat_pattern } = this.state;
 
     return(
-      <Segment basic>
-        <Header as='h1' textAlign='center'>Set Reminders</Header>
-        <Form onSubmit={this.handleSubmit}>
-          <Form.Field>
-            <label>Reminder Type</label>
-            <input
-              id='reminder_type'
-              placeholder='Enter reminder type. For example, Vet Appointment'
-              required
-              value={reminder_type}
-              onChange={this.handleChange}
+
+      <Container text style={containerStyle}>
+        <Segment basic>
+          <Header as='h1' textAlign='center'>Set Reminders</Header>
+          <Form onSubmit={this.handleSubmit}>
+            <Form.Field>
+              <label>Reminder Type</label>
+              <input
+                id='reminder_type'
+                placeholder='Enter reminder type. For example, Vet Appointment'
+                required
+                value={reminder_type}
+                onChange={this.handleChange}
+              />
+            </Form.Field>
+            <Form.Field>
+              <label>Date of Reminder</label>
+              <input
+                id='date_time'
+                placeholder='Enter Date Format: YYYY/MM/DD'
+                required
+                value={date_time}
+                onChange={this.handleChange}
             />
-          </Form.Field>
-          <Form.Field>
-            <label>Date of Reminder</label>
-            <input
-              id='date_time'
-              placeholder='Enter Date Format: YYYY/MM/DD'
-              required
-              value={date_time}
-              onChange={this.handleChange}
-          />
-          </Form.Field>
-          {/* <Form.Field>
-            <label>Select for Reminders</label>
-            <Checkbox toggle />
-          </Form.Field>
-          </Form.Field>
-          <Form.Field>
-              <Menu compact>
-                <Dropdown text='Pattern' options={pattern} simple item />
-              </Menu>
-          </Form.Field> */}
-          <Segment basic textAlign='center'>
-            <Button type='submit'>Submit</Button>
-          </Segment>
-        </Form>
-      </Segment>
+            </Form.Field>
+            {/* <Form.Field>
+              <label>Select for Reminders</label>
+              <Checkbox toggle />
+            </Form.Field>
+            </Form.Field>
+            <Form.Field>
+                <Menu compact>
+                  <Dropdown text='Pattern' options={pattern} simple item />
+                </Menu>
+            </Form.Field> */}
+            <Segment basic textAlign='center'>
+              <Button type='submit'>Submit</Button>
+            </Segment>
+          </Form>
+        </Segment>
+      </Container>
     );
   }
 }

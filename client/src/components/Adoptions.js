@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import axios from 'axios'
-import { Header, Card, Image} from 'semantic-ui-react';
+import { Container, Header, Image, Card } from 'semantic-ui-react';
 import Kitty from '../images/adoption.jpg';
-import { Row, Col, Container } from 'react-materialize';
+import { Row, Col} from 'react-materialize';
+
+
+const containerStyle = {
+  maxWidth: 900,
+  marginTop: 20,
+};
+
+const cardStyle = {
+  backgroundColor: 'mintcream'
+};
 
 class Adoptions extends Component {
   constructor(props) {
@@ -47,14 +57,12 @@ class Adoptions extends Component {
   render() {
     return (
 
-      <Container>
+      <Container text style={containerStyle}>
         <Row>
           <Col s={12}>
-          <br />
             <Header textAlign='center'>
               <h1><strong>Pet Adoption Shelters</strong></h1>
             </Header>
-
           </Col>
         </Row>
         <Row>
@@ -65,11 +73,13 @@ class Adoptions extends Component {
 
         <br />
         <Col s4>
-        <Card.Group >
+        <div style={cardStyle}>
+        <Card.Group>
         { this.display() }
         </Card.Group>
+      </div>
         </Col>
-      <br />  
+      <br />
     </Container>
     )
   }

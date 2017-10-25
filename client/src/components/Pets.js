@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Image, Card, Button} from 'semantic-ui-react';
+import { Container, Header, Image, Card, Button} from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
 import Kittens from '../images/pets.jpeg';
-import { Row, Col, Container} from 'react-materialize';
+import { Row, Col} from 'react-materialize';
+
+const containerStyle = {
+  maxWidth: 900,
+  marginTop: 20
+};
+
 
 class Pets extends Component {
   constructor(props) {
@@ -26,7 +32,7 @@ class Pets extends Component {
           <Card.Content extra>
               <Button
                 className='cyan lighten-3'>
-                <a href={`managepet/${pet.id}`} style={styles.black}><strong>Click Here for Summary</strong></a>
+                <a href={`managepet/${pet.id}`}><strong>Click Here for Summary</strong></a>
               </Button>
           </Card.Content>
 
@@ -39,11 +45,9 @@ class Pets extends Component {
   render() {
     return(
 
-      <div>
-      <Container>
+      <Container text style={containerStyle}>
         <Row>
           <Col s={12}>
-          <br />
             <Header textAlign='center'>
               <h1><strong>My Pets</strong></h1>
             </Header>
@@ -60,14 +64,10 @@ class Pets extends Component {
         </Card.Group>
         <br />
       </Container>
-      </div>
     )
   }
 }
 
-const styles = {
-  black: { color: 'black' },
-}
 
 const mapStateToProps = (state) => {
   return { pets: state.pets };

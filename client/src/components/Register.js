@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
-import { Header, Form, Button, Segment } from 'semantic-ui-react';
+import { Container, Header, Form, Button, Segment } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import { registerUser } from '../actions/auth';
+
+const containerStyle = {
+  maxWidth: 900,
+  marginTop: 15
+};
 
 class Register extends Component {
   state = { email: '', password: '', passwordConfirmation: '' };
@@ -28,7 +33,8 @@ class Register extends Component {
     const { email, password, passwordConfirmation } = this.state;
 
     return(
-      <Segment basic>
+      <Container text style={containerStyle}>
+        <Segment basic style={containerStyle}>
         <Header as='h1' textAlign='center'>Register</Header>
         <Form onSubmit={this.handleSubmit}>
           <Form.Field>
@@ -68,6 +74,7 @@ class Register extends Component {
           </Segment>
         </Form>
       </Segment>
+    </Container>
     );
   }
 }

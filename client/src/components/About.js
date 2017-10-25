@@ -4,11 +4,19 @@ import { Container, Header, Image } from 'semantic-ui-react';
 import { Row, Col} from 'react-materialize';
 import Cat from '../images/about.jpeg';
 
+const containerStyle = {
+  maxWidth: 900,
+  marginTop: 20
+};
+
+const imageStyle = {
+  maxHeight: 500
+};
+
 const About = () => (
-  <Container text>
+  <Container text style={containerStyle}>
     <Row>
       <Col s={12}>
-      <br />
         <Header textAlign='center'><h1><strong>About</strong></h1></Header>
       </Col>
     </Row>
