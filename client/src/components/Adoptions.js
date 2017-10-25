@@ -70,16 +70,16 @@ class Adoptions extends Component {
             <Image src={Kitty} alt='kitten' centered fluid/>
           </Col>
         </Row>
-
         <br />
+        
         <Col s4>
         <div style={sectionStyle}>
-        <Card.Group>
-        { this.display() }
-        </Card.Group>
-      </div>
+          <Card.Group>
+            { this.display() }
+          </Card.Group>
+        </div>
         </Col>
-      <br />
+        <br />
     </Container>
     )
   }

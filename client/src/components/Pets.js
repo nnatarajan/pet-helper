@@ -27,7 +27,7 @@ class Pets extends Component {
     return this.props.pets.map(pet => {
       return (
 
-        <Card fluid className='cyan lighten-5'>
+        <Card centered className='cyan lighten-5'>
 
           <Card.Content>
             <Card.Header>{pet.name}</Card.Header>
@@ -62,11 +62,13 @@ class Pets extends Component {
             </Col>
         </Row>
         <br />
-        <div textAlign='center' style={sectionStyle}>
+        <Col>
+        <div style={sectionStyle}>
           <Card.Group centered>
             { this.display() }
           </Card.Group>
         </div>
+        </Col>
         <br />
       </Container>
     )
