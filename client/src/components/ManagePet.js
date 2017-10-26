@@ -2,12 +2,24 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Image, Button, Card, Table} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
-import Kitten from '../images/kitten-800-409.jpeg';
+import Kitten from '../images/kitten-800-580.jpeg';
 import { Row, Col} from 'react-materialize';
 
 const containerStyle = {
   maxWidth: 900,
   marginTop: 20
+};
+
+const cardStyle = {
+  backgroundColor: '#E8E8E8'
+};
+
+const tableStyle = {
+  backgroundColor: '#C0DEDB'
+};
+
+const buttonStyle = {
+  backgroundColor: '#C0DEDB'
 };
 
 class ManagePet extends Component {
@@ -21,14 +33,14 @@ class ManagePet extends Component {
     let pet = this.props.pet;
     return (
 
-      <Card fluid centered className="card purple lighten-5 center-align" >
+      <Card fluid centered style={cardStyle} className="center-align" >
         <Card.Content>
           <Card.Header><h1>{pet.name}</h1></Card.Header>
         </Card.Content>
         <Card.Content>
         <Card.Description>
 
-          <Table unstackable className="purple lighten-4">
+          <Table unstackable style={tableStyle}>
             <Table.Header >
               <Table.Row>
                 <Table.HeaderCell>Species</Table.HeaderCell>
@@ -48,7 +60,7 @@ class ManagePet extends Component {
         </Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Button className="purple lighten-3" >
+          <Button style={buttonStyle} >
             <a href={`/reminders/${this.props.match.params.petid}`}>Click to Create Reminders</a>
           </Button>
 
@@ -75,10 +87,12 @@ class ManagePet extends Component {
           </Col>
         </Row>
 
-
+        <br/>
+        <div>
         <Col>
           { this.display() }
         </Col>
+        </div>
         <br />
     </Container>
     )
