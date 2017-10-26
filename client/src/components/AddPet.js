@@ -9,6 +9,11 @@ const containerStyle = {
   fontFamily: 'Roboto'
 };
 
+const headerStyle = {
+  marginTop: 15,
+  marginBottom: 15
+};
+
 class AddPet extends Component {
   state = { name: '', species: '', birthday: '', notes: '' };
 
@@ -31,7 +36,7 @@ class AddPet extends Component {
     return(
       <Container style={containerStyle}>
         <Segment basic>
-          <Header as='h1' textAlign='center'>Add a Pet</Header>
+          <Header as='h1' textAlign='center' style={headerStyle}>Add a Pet</Header>
           <Form onSubmit={this.handleSubmit}>
             <Form.Field>
               <label>Name</label>

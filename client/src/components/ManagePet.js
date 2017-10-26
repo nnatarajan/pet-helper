@@ -22,6 +22,11 @@ const buttonStyle = {
   backgroundColor: '#C0DEDB'
 };
 
+const headerStyle = {
+  marginTop: 15,
+  marginBottom: 15
+};
+
 class ManagePet extends Component {
   componentDidMount() {
     let { dispatch, match: { params } } = this.props;
@@ -76,7 +81,7 @@ class ManagePet extends Component {
       <Container text style={containerStyle}>
         <Row>
           <Col s={12}>
-          <Header textAlign='center'>
+          <Header textAlign='center' style={headerStyle}>
             <h1><strong>Manage My Pet</strong></h1>
           </Header>
           </Col>

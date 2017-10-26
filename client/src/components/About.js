@@ -16,11 +16,16 @@ const sectionStyle = {
   fontSize: 'inherit'
 };
 
+const headerStyle = {
+  marginTop: 15,
+  marginBottom: 15
+};
+
 const About = () => (
   <Container text style={containerStyle}>
     <Row>
       <Col s={12}>
-        <Header textAlign='center'><h1><strong>About</strong></h1></Header>
+        <Header textAlign='center' style={headerStyle}><h1><strong>About</strong></h1></Header>
       </Col>
     </Row>
     <Row>

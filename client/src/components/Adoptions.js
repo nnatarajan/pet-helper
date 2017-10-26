@@ -21,6 +21,11 @@ const cardStyle = {
   backgroundColor: '#D0E6E6'
 };
 
+const headerStyle = {
+  marginTop: 15,
+  marginBottom: 15
+};
+
 class Adoptions extends Component {
   constructor(props) {
     super(props);
@@ -67,7 +72,7 @@ class Adoptions extends Component {
       <Container text style={containerStyle}>
         <Row>
           <Col s={12}>
-            <Header textAlign='center'>
+            <Header textAlign='center' style={headerStyle}>
               <h1><strong>Pet Adoption Shelters</strong></h1>
             </Header>
           </Col>

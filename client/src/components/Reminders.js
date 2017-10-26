@@ -34,6 +34,10 @@ const containerStyle = {
   marginTop: 15
 };
 
+const headerStyle = {
+  marginTop: 15,
+  marginBottom: 15
+};
 
 class Reminders extends Component {
   state = { reminder_type: '', date_time: '', repeat: true, repeat_pattern: 'yearly'};
@@ -61,7 +65,7 @@ class Reminders extends Component {
 
       <Container text style={containerStyle}>
         <Segment basic>
-          <Header as='h1' textAlign='center'>Set Reminders</Header>
+          <Header as='h1' textAlign='center' style={headerStyle}>Set Reminders</Header>
           <Form onSubmit={this.handleSubmit}>
             <Form.Field>
               <label>Reminder Type</label>

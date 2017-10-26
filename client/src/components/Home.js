@@ -9,6 +9,10 @@ const containerStyle = {
   marginTop: 20,
   fontFamily: 'Roboto',
 };
+const headerStyle = {
+  marginTop: 15,
+  marginBottom: 15
+};
 
 class Home extends Component {
   render() {
@@ -17,7 +21,7 @@ class Home extends Component {
       <Container text style={containerStyle}>
         <Row>
           <Col s={12}>
-            <Header textAlign='center'><h1><strong>Welcome to Pet Helper!</strong></h1></Header>
+            <Header textAlign='center' style={headerStyle}><h1><strong>Welcome to Pet Helper!</strong></h1></Header>
           </Col>
         </Row>
         <Row>

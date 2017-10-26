@@ -29,6 +29,11 @@ const buttonStyle = {
   backgroundColor: '#C0DEDB'
 };
 
+const headerStyle = {
+  marginTop: 15,
+  marginBottom: 15
+};
+
 class Pets extends Component {
   constructor(props) {
     super(props)
@@ -65,7 +70,7 @@ class Pets extends Component {
       <Container text style={containerStyle}>
         <Row>
           <Col s={12}>
-            <Header textAlign='center'>
+            <Header textAlign='center' style={headerStyle}>
               <h1><strong>My Pets</strong></h1>
             </Header>
           </Col>
