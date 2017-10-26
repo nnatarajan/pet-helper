@@ -12,7 +12,7 @@ const containerStyle = {
 };
 
 const sectionStyle = {
-  backgroundColor: 'mintcream'
+  backgroundColor: '#E8E8E8'
 };
 
 const innerSectionStyle = {
@@ -21,6 +21,13 @@ const innerSectionStyle = {
   fontSize: 15
 };
 
+const cardStyle = {
+  backgroundColor: '#D0E6E6'
+};
+
+const buttonStyle = {
+  backgroundColor: '#C0DEDB'
+};
 
 class Pets extends Component {
   constructor(props) {
@@ -35,14 +42,13 @@ class Pets extends Component {
     return this.props.pets.map(pet => {
       return (
 
-        <Card centered className='cyan lighten-5'>
+        <Card centered style={cardStyle}>
 
           <Card.Content>
             <Card.Header>{pet.name}</Card.Header>
           </Card.Content>
           <Card.Content extra>
-              <Button
-                className='cyan lighten-3'>
+              <Button style={buttonStyle}>
                 <a href={`managepet/${pet.id}`}><strong>Click Here for Summary</strong></a>
               </Button>
           </Card.Content>

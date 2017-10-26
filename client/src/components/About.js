@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Segment, Header, Image } from 'semantic-ui-react';
 import { Row, Col} from 'react-materialize';
-import Cat from '../images/kitten-800-400.jpeg';
+import Cat from '../images/kitten-800-605.jpeg';
 
 const containerStyle = {
   maxWidth: 900,
@@ -12,7 +12,7 @@ const containerStyle = {
 
 const sectionStyle = {
   fontFamily: 'Montserrat',
-  backgroundColor: 'mintcream',
+  backgroundColor: '#E8E8E8',
   fontSize: 'inherit'
 };
 
@@ -28,6 +28,7 @@ const About = () => (
       <Image src={Cat} alt='Cat' centered fluid/>
       </Col>
     </Row>
+    <br />
     <Segment style={sectionStyle}>
       <Row >
         <Col s={12}>

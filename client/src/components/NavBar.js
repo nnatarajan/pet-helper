@@ -5,6 +5,11 @@ import { connect } from 'react-redux';
 import { handleLogout } from '../actions/auth';
 import { withRouter } from 'react-router-dom';
 
+const containerStyle = {
+  marginLeft: 2,
+  marginRight: 2
+};
+
 class NavBar extends Component {
   rightNavs = () => {
     const { user, dispatch, history } = this.props;
@@ -42,7 +47,7 @@ class NavBar extends Component {
     return (
       <div class="row">
         <div class="col s12">
-        <Menu stackable pointing secondary >
+        <Menu stackable pointing secondary style={containerStyle}>
           <Link to='/'>
             <Menu.Item name='home' />
           </Link>

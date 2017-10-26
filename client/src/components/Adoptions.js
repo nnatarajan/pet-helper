@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Container, Header, Image, Card } from 'semantic-ui-react';
-import Kitty from '../images/kitten-800-418.jpeg';
+import Kitty from '../images/kitten-800-500.jpeg';
 import { Row, Col} from 'react-materialize';
 
 
@@ -12,9 +12,13 @@ const containerStyle = {
 };
 
 const sectionStyle = {
-  backgroundColor: 'mintcream',
+  backgroundColor: '#E8E8E8',
   fontFamily: 'Montserrat',
   fontSize: 13
+};
+
+const cardStyle = {
+  backgroundColor: '#D0E6E6'
 };
 
 class Adoptions extends Component {
@@ -38,7 +42,7 @@ class Adoptions extends Component {
     return this.state.adoptions.map( adoptions => {
       return (
 
-        <Card centered className='green lighten-3'>
+        <Card centered style={cardStyle}>
 
           <Card.Content>
           <Card.Header>{adoptions.name.$t}</Card.Header>

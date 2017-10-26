@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { Container, Header, Image } from 'semantic-ui-react';
 import { Row, Col} from 'react-materialize';
 // import {HomeImage} from './HomeImage';
-import Dog from '../images/kitten-800-500.jpeg';
+import Cat from '../images/kitten-800-580.jpeg';
 
 const containerStyle = {
   maxWidth: 900,
   marginTop: 20,
-  fontFamily: 'Roboto'
+  fontFamily: 'Roboto',
 };
 
 class Home extends Component {
@@ -22,7 +22,7 @@ class Home extends Component {
         </Row>
         <Row>
           <Col s={12}>
-          <Image src={Dog} alt='Dog' centered fluid />
+          <Image src={Cat} alt='Cat in the snow' centered fluid />
           </Col>
         </Row>
       <br />
