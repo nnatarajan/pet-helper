@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import axios from 'axios'
 import { Container, Header, Image, Card } from 'semantic-ui-react';
-import Kitty from '../images/kitten-800-500.jpeg';
+import Kitty from '../images/kitten-800-555.jpeg';
 import { Row, Col} from 'react-materialize';
 
 
 const containerStyle = {
   maxWidth: 900,
   marginTop: 20,
-  fontFamily: 'Roboto'
+  fontFamily: 'Roboto',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 const sectionStyle = {

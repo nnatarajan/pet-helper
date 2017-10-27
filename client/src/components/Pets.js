@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Grid, Container, Header, Image, Card, Button} from 'semantic-ui-react';
 import { fetchPets } from '../actions/pets';
-import Kittens from '../images/kitten-800-401.jpeg';
+import Kittens from '../images/kittens-800-578.jpeg';
 import { Row, Col} from 'react-materialize';
 
 const containerStyle = {
   maxWidth: 900,
   marginTop: 20,
-  fontFamily: 'Roboto'
+  fontFamily: 'Roboto',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 const sectionStyle = {

@@ -6,7 +6,9 @@ import { handleLogin } from '../actions/auth';
 const containerStyle = {
   maxWidth: 900,
   marginTop: 15,
-  fontFamily: 'Roboto'
+  fontFamily: 'Roboto',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 class Login extends Component {

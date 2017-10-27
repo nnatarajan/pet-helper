@@ -31,7 +31,10 @@ import { addReminder } from '../actions/reminders';
 
 const containerStyle = {
   maxWidth: 900,
-  marginTop: 15
+  marginTop: 15,
+  fontFamily: 'Roboto',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 const headerStyle = {

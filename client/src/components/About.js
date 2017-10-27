@@ -7,7 +7,9 @@ import Cat from '../images/kitten-800-605.jpeg';
 const containerStyle = {
   maxWidth: 900,
   marginTop: 20,
-  fontFamily: 'Roboto'
+  fontFamily: 'Roboto',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 const sectionStyle = {

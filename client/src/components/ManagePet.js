@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Header, Image, Button, Card, Table} from 'semantic-ui-react';
 import { fetchSelectedPet } from '../actions/pets';
-import Kitten from '../images/kitten-800-580.jpeg';
+import Kitten from '../images/kitten-800-608.jpeg';
 import { Row, Col} from 'react-materialize';
 
 const containerStyle = {
   maxWidth: 900,
-  marginTop: 20
+  marginTop: 20,
+  fontFamily: 'Roboto',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
 
 const cardStyle = {
@@ -15,7 +18,8 @@ const cardStyle = {
 };
 
 const tableStyle = {
-  backgroundColor: '#C0DEDB'
+  backgroundColor: '#C0DEDB',
+  fontFamily: 'Montserrat'
 };
 
 const buttonStyle = {

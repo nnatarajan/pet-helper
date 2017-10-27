@@ -8,11 +8,15 @@ const containerStyle = {
   maxWidth: 900,
   marginTop: 20,
   fontFamily: 'Roboto',
+  justifyContent: 'center',
+  alignItems: 'center'
 };
+
 const headerStyle = {
   marginTop: 15,
   marginBottom: 15
 };
+
 
 class Home extends Component {
   render() {
@@ -26,9 +30,10 @@ class Home extends Component {
         </Row>
         <Row>
           <Col s={12}>
-          <Image src={Cat} alt='Cat in the snow' centered fluid />
+          <Image src={Cat} alt='kitten' fluid />
           </Col>
         </Row>
+
       <br />
       </Container>
 
