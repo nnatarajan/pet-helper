@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Header, Image } from 'semantic-ui-react';
-import { Row, Col} from 'react-materialize';
+import { Row, Col, Carousel} from 'react-materialize';
 // import {HomeImage} from './HomeImage';
 import Cat from '../images/kitten-800-580.jpeg';
 
@@ -30,10 +30,15 @@ class Home extends Component {
         </Row>
         <Row>
           <Col s={12}>
-          <Image src={Cat} alt='kitten' fluid />
+            <Carousel options={{ fullWidth: true }} images={[
+            	'http://placekitten.com/800/580',
+            	'http://placekitten.com/800/605',
+            	'http://placekitten.com/800/555',
+            	'http://placekitten.com/800/578',
+            	'http://placekitten.com/800/608'
+            ]} />
           </Col>
         </Row>
-
       <br />
       </Container>
 
