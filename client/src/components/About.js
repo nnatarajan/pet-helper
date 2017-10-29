@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Container, Segment, Header, Image } from 'semantic-ui-react';
+import { Container, Segment, Header, Image} from 'semantic-ui-react';
 import { Row, Col} from 'react-materialize';
 import Cat from '../images/kitten-800-605.jpeg';
 
@@ -9,7 +9,7 @@ const containerStyle = {
   marginTop: 20,
   fontFamily: 'Roboto',
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
 };
 
 const sectionStyle = {
@@ -30,11 +30,13 @@ const About = () => (
         <Header textAlign='center' style={headerStyle}><h1><strong>About</strong></h1></Header>
       </Col>
     </Row>
+
     <Row>
       <Col s={12}>
-      <Image src={Cat} alt='Cat' centered fluid/>
+        <Image src={Cat} alt='Cat' centered fluid/>
       </Col>
     </Row>
+
     <br />
     <Segment style={sectionStyle}>
       <Row >
