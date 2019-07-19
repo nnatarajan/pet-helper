@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Container, Header, Image } from 'semantic-ui-react';
 import { Row, Col, Carousel} from 'react-materialize';
 // import {HomeImage} from './HomeImage';
-// import Cat from '../images/kitten-800-580.jpeg';
+import Cat from '../images/kitten-800-580.jpeg';
 
 const containerStyle = {
   maxWidth: 900,
@@ -32,9 +32,10 @@ class Home extends Component {
           <Col s={12}>
             <Carousel options={{ fullWidth: true }} images={[
             	'http://placekitten.com/800/580',
-              'http://lorempixel.com/800/580/animals/10/',
-              'http://placekitten.com/800/581',
-              'http://lorempixel.com/800/580/animals/9/'
+            	'http://placekitten.com/800/605',
+            	'http://placekitten.com/800/555',
+            	'http://placekitten.com/800/578',
+            	'http://placekitten.com/800/608'
             ]} />
           </Col>
         </Row>
