@@ -41,17 +41,24 @@ const About = () => (
         <Col s={12}>
         <br />
           <p textAlign='center'>
-          Hello! Welcome to Pet Helper! I have designed and built this full stack web application with React / JavaScript and Ruby on Rails.  Similar to the app name, my goal is to assist pet owners in taking care of their furry and non-furry pals. The main features of this app are finding a new pet and storing & viewing pet information. Upon sharing my application, a veterinary assistant offered welcomed suggestions. He shared that the most important part of pet care is immunizations. For more information,  please contact ASPCA. If you are considering adopting a pet and live in Salt Lake city or the surrounding areas,  I have included a built-in API, that reflects up-to-date contact information for a list of local animal shelters. Lastly, please check out my website for upcoming projects.
+          Hello! Welcome to Pet Helper! I have designed and built this full stack web application with React / JavaScript on the front end and Ruby on Rails on the back end.  Similar to the app name, my goal here is to assist pet owners in the care of their furry and non-furry pals. The main features of this app are finding a new pet and storing & viewing pet information.
           </p>
         </Col>
       </Row>
-      {/* <Row>
+      <Row>
         <Col s={12}>
           <p>
-          On launch day, a veterinary assistant approached my booth and offered me welcomed suggestions. He had stated that the most important part of pet care is immunizations. In addition, he had mentioned that too often pet owners forget how vital immunizations are for basic care. Please click on this <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet"> link </a> for more detailed information from the ASPCA. If you are considering adopting a pet, I have included a built-in API, that reflects up-to-date contact information for a list of local  <Link to='/adoptions'>  animal shelters </Link> in Salt Lake City, UT and surrounding areas. Lastly, please check out my <a href="https://nnatarajan.github.io/"> website </a>for upcoming projects.
+          Upon showing my application to veterinary assistant, he offered welcomed suggestions. He stated that the most important part of pet care is immunizations. For more information,  please reference or contact the <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet"> ASPCA</a> . If you are considering adopting a pet and live in Salt Lake city or the surrounding areas,  I have included a built-in API,  which reflects up-to-date contact information for a list of local <Link to='/adoptions'> animal shelters </Link>. 
           </p>
         </Col>
-      </Row> */}
+      </Row>
+      <Row>
+        <Col s={12}>
+          <p>
+          Lastly, please check out my  <a href="https://nnatarajan.github.io/"> website </a> for upcoming projects.
+          </p>
+        </Col>
+      </Row>
       <Row>
         <Col s={12}>
         <p>Thank you for visiting!</p>
