@@ -41,27 +41,28 @@ const About = () => (
         <Col s={12}>
         <br />
           <p textAlign='center'>
-          Hello! Welcome to Pet Helper! I have designed and built this web application with the sole purpose of assisting pet owners in taking the best care of their pets. The main features of this app are finding a new pet, storing & viewing pet information, and setting up reminders. Currently, I am working on adding more features and making improvements to Pet Helper. Please note that you may need to delete your browser history or change to a different browser to view the most current version of the Pet Helper application.
+          Hello! Welcome to Pet Helper! I have designed and built this full stack web application with React / JavaScript and Ruby on Rails.  Similar to the app name, my goal is to assist pet owners in taking care of their furry and non-furry pals. The main features of this app are finding a new pet and storing & viewing pet information. Upon sharing my application, a veterinary assistant offered welcomed suggestions. He shared that the most important part of pet care is immunizations. For more information,  please contact ASPCA. If you are considering adopting a pet and live in Salt Lake city or the surrounding areas,  I have included a built-in API, that reflects up-to-date contact information for a list of local animal shelters. Lastly, please check out my website for upcoming projects.
           </p>
         </Col>
       </Row>
-      <Row>
+      {/* <Row>
         <Col s={12}>
           <p>
           On launch day, a veterinary assistant approached my booth and offered me welcomed suggestions. He had stated that the most important part of pet care is immunizations. In addition, he had mentioned that too often pet owners forget how vital immunizations are for basic care. Please click on this <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet"> link </a> for more detailed information from the ASPCA. If you are considering adopting a pet, I have included a built-in API, that reflects up-to-date contact information for a list of local  <Link to='/adoptions'>  animal shelters </Link> in Salt Lake City, UT and surrounding areas. Lastly, please check out my <a href="https://nnatarajan.github.io/"> website </a>for upcoming projects.
           </p>
         </Col>
-      </Row>
+      </Row> */}
       <Row>
         <Col s={12}>
-        <p>Thank you for visiting my site! </p>
-        </Col>
-      </Row>
-      <Row>
-        <Col s={12}>
+        <p>Thank you for visiting!</p>
         <p>~ Natasha</p>
         </Col>
       </Row>
+      {/* <Row>
+        <Col s={12}>
+        <p>~ Natasha</p>
+        </Col>
+      </Row> */}
     </Segment>
   </Container>
 
