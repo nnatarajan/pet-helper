@@ -48,14 +48,14 @@ const About = () => (
       <Row>
         <Col s={12}>
           <p>
-          Upon sharing my application with a veterinary assistant, he had offered welcomed suggestions. He had stated often pet owners forget the most basic and important part of pet care; immunizations. For more information,  please reference or contact the <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet">ASPCA</a>. If you are considering adopting a pet and live in Salt Lake city or the surrounding areas,  I have included a built-in API,  which reflects up-to-date contact information for a list of local <Link to='/adoptions'>animal shelters</Link>.
+          Upon sharing my application with a veterinary assistant, he had offered welcomed suggestions. He had stated that very often pet owners forget the most basic and essential part of pet care; immunizations. For more information,  please reference the <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet" target="_blank">ASPCA</a>. If you are considering adopting a pet and live in Salt Lake city or the surrounding areas,  please check out the <Link to='/adoptions'>adoption page</Link>. To aid in your search, I have included a built-in API,  which reflects up-to-date contact information for a list of local <Link to='/adoptions'>animal shelters</Link>.
           </p>
         </Col>
       </Row>
       <Row>
         <Col s={12}>
           <p>
-          Lastly, please check out my  <a href="https://nnatarajan.github.io/">website </a> for upcoming projects.
+          Lastly, please check out my  <a href="https://nnatarajan.github.io/" target="_blank">website </a> for upcoming projects.
           </p>
         </Col>
       </Row>
