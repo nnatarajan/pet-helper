@@ -41,21 +41,21 @@ const About = () => (
         <Col s={12}>
         <br />
           <p textAlign='center'>
-          Hello! Welcome to Pet Helper! I have designed and built this full stack web application with React / JavaScript on the front end and Ruby on Rails on the back end.  Similar to the app name, my goal here is to assist pet owners in the care of their furry and non-furry pals. The main features of this app are finding a new pet and storing & viewing pet information.
+          Hello! Welcome to Pet Helper! I have designed and built this full stack web application with React / JavaScript on the front end and Ruby on Rails on the back end.  Similar to the app name, my goal here is to assist pet owners in the care of their furry and non-furry pals. The main features of this app are finding a new pet and storing & viewing pet information. 
           </p>
         </Col>
       </Row>
       <Row>
         <Col s={12}>
           <p>
-          Upon showing my application to veterinary assistant, he offered welcomed suggestions. He stated that the most important part of pet care is immunizations. For more information,  please reference or contact the <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet"> ASPCA</a> . If you are considering adopting a pet and live in Salt Lake city or the surrounding areas,  I have included a built-in API,  which reflects up-to-date contact information for a list of local <Link to='/adoptions'> animal shelters </Link>. 
+          Upon sharing my application with a veterinary assistant, he had offered welcomed suggestions. He had stated often pet owners forget the most basic and important part of pet care; immunizations. For more information,  please reference or contact the <a href="https://www.aspca.org/pet-care/general-pet-care/vaccinations-your-pet">ASPCA</a>. If you are considering adopting a pet and live in Salt Lake city or the surrounding areas,  I have included a built-in API,  which reflects up-to-date contact information for a list of local <Link to='/adoptions'>animal shelters</Link>.
           </p>
         </Col>
       </Row>
       <Row>
         <Col s={12}>
           <p>
-          Lastly, please check out my  <a href="https://nnatarajan.github.io/"> website </a> for upcoming projects.
+          Lastly, please check out my  <a href="https://nnatarajan.github.io/">website </a> for upcoming projects.
           </p>
         </Col>
       </Row>
