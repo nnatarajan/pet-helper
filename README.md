@@ -1,6 +1,6 @@
 # Pet Helper
 
-A full-stack app built with a React frontend and Ruby on Rails API backend. 
+A full-stack app built with a React and Ruby on Rails
 
 ## 🚀 Features
 * Secure User Authentication using JWT / Devise
@@ -11,7 +11,7 @@ A full-stack app built with a React frontend and Ruby on Rails API backend.
 
 ### Frontend
 * **Framework:** React / JavaScript
-* **State Management:** [Redux Toolkit / React Context API]
+* **State Management:** Redux Toolkit / React
 * **Styling:** Semantic UI / Styled Components
   
 ### Backend
