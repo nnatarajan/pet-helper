@@ -3,9 +3,9 @@
 A full-stack app built with a React frontend and Ruby on Rails API backend. 
 
 ## 🚀 Features
-* **[Feature 1]:** [e.g., Secure User Authentication using JWT / Devise]
-* **[Feature 2]:** [e.g., Responsive dashboard built with React and Semantic CSS]
-* **[Feature 3]:** [e.g., Comprehensive RESTful API with full CRUD functionality]
+* Secure User Authentication using JWT / Devise
+* Responsive dashboard built with React and Semantic CSS
+* Comprehensive RESTful API with full CRUD functionality
 
 ## 🛠️ Tech Stack
 
@@ -16,7 +16,7 @@ A full-stack app built with a React frontend and Ruby on Rails API backend.
   
 ### Backend
 * **Framework:** Ruby on Rails 
-* * **Database:** PostgreSQL
+* **Database:** PostgreSQL
 
 ## 💻 Local Setup & Environment Note
 
@@ -57,8 +57,6 @@ A full-stack app built with a React frontend and Ruby on Rails API backend.
 ## ⚠️ Legacy Compatibility
 Because the JavaScript and Ruby ecosystems evolve rapidly, attempting to boot this application on a modern environment may require aligning your local version managers (`nvm`, `rbenv`, `rvm`) with the versions declared in the root `Gemfile` and `package.json` files.
 
-## 📄 License
-This project is open-source and available under the MIT License.
 
 ## 📄 License
-This project is open-source and available under the MIT License.(LICENSE) file for details.
+This project is open-source and available under the MIT License.(LICENSE) file for details
