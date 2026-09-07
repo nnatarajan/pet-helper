@@ -1,6 +1,6 @@
 # Pet Helper
 
-A full-stack app built with a React and Ruby on Rails
+A full-stack app built with a React/JavaScript and Ruby on Rails for managing pet care
 
 ## 🚀 Features
 * Secure User Authentication using JWT / Devise
